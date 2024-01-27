@@ -1,5 +1,5 @@
 # Introduction
-Application that serves as a collection of resources for developers. 
+Application that serves as a collection of resources for developers. The website can be used just like bookmarks, saving resources for when you need them. 
 - AI
 - VSCode extensions
 - Cheatsheets
@@ -29,7 +29,6 @@ Full stack application that uses the MERN stack
 - Node.js
 
 ## :zap: Usage
-The website can be used just like bookmarks, saving resources for when you need them.
 
 ### :electric_plug: Installation
 To install this project, you need to have Node.js and MongoDB installed on your system. Then, you can clone this repository and run `npm install` in the project directory to install the necessary dependencies.
