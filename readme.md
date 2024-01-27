@@ -3,6 +3,7 @@
 ## :ledger: Index
 - [About](#beginner-about)
 - [Development](#wrench-development)
+  - [Tech](#computer-tech)
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
 - [Usage](#zap-usage)
@@ -39,7 +40,7 @@ Collection of resources for developers.<br>
 
 ## :wrench: Development
 
-#### 🖥️ Tech
+#### :computer: Tech
 
 - MongoDB
 - Express.js
