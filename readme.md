@@ -1,6 +1,6 @@
 ## :rocket: Introduction
 ### DevTools<br>
-### Application that serves as a collection of resources for developers.<br>
+Application that serves as a collection of resources for developers.<br>
 - **Features** 
     - User Management System
     - Add, edit, remove content that's stored in DB
