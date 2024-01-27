@@ -1,5 +1,5 @@
 # Introduction
-Application that serves as a collection of resources for developers. The website can be used just like bookmarks, saving resources for when you need them. 
+Application that serves as a collection of resources for developers.<br>The website can be used just like bookmarks, saving resources for when you need them. 
 - AI
 - VSCode extensions
 - Cheatsheets
