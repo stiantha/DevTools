@@ -38,8 +38,21 @@ $ npm install
 ```
 
 ### :package: Commands
-To start the project, use the command npm start.
+```bash
+- `npm install`: This command is used to install all the dependencies of the project.
 
+- `npm start`: This command is used to start the application.
+
+- `npm run build`: This command is used to build the application for production.
+
+- `npm test`: This command is used to run the test suite.
+
+- `npm run dev`: This command is used to start the application in development mode (if you have set up something like nodemon for automatic reloading).
+
+- `npm run lint`: This command is used to run the linter (if you have one set up, like ESLint or Prettier).
+
+- `npm run format`: This command is used to auto-format the code (if you have a formatter like Prettier set up).
+```
 ### :wrench: Development
 Contributions to this project are welcome.
 
@@ -49,11 +62,6 @@ Contributions to this project are welcome.
 - MongoDB
 - A text editor (like VSCode)
 
-### :nut_and_bolt: Development Environment
-After cloning the project and installing dependencies, you can start the development server.
-```bash
-npm start
-```
 ### :file_folder: File Structure
 The basic file structure for the project is as follows:
 ```bash
@@ -64,13 +72,6 @@ The basic file structure for the project is as follows:
  ┣ 📜.gitignore
  ┗ 📜readme.md
 ```
-## :hammer: Build
-To build the project for production, navigate to the client directory and run 
-```bash
-npm run build.
-```
-## :rocket: Deployment
-Deployment instructions will vary depending on your chosen hosting platform. Most platforms will require you to push your built project to a Git repository, then pull from that repository onto your server.
 
 ## :cherry_blossom: Community
 This project is open-source, and contributions are welcome.
