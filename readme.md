@@ -1,6 +1,5 @@
 # Introduction
-My first MERN stack application that serves as a collection of resources for developers. 
-- **such as**
+Application that serves as a collection of resources for developers. 
 - AI
 - VSCode extensions
 - Cheatsheets
