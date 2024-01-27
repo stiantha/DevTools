@@ -14,8 +14,6 @@ MERN stack application that serves as a collection of resources for developers. 
   - [Deployment](#rocket-deployment)  
 - [Community](#cherry_blossom-community)
   - [Contribution](#fire-contribution)
-  - [Branches](#cactus-branches)
-  - [Guideline](#exclamation-guideline)  
 - [FAQ](#question-faq)
 - [Resources](#page_facing_up-resources)
 - [Gallery](#camera-gallery)
