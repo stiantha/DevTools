@@ -23,12 +23,12 @@ Collection of resources for developers.<br>
 
 ## :ledger: Index
 - [About](#beginner-about)
-- [Usage](#zap-usage)
-  - [Installation](#electric_plug-installation)
-  - [Commands](#package-commands)
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
+- [Usage](#zap-usage)
+  - [Installation](#electric_plug-installation)
+  - [Commands](#package-commands)
 - [Documentation](#book-documentation)
     - [FAQ](#question-faq)
     - [Gallery](#camera-gallery)
@@ -41,23 +41,6 @@ Full stack application that uses the MERN stack
 - Express.js
 - React.js
 - Node.js
-
-## :zap: Usage
-
-### :electric_plug: Installation
-```bash
-$ git clone https://github.com/stiantha/DevTools.git
-$ cd DevTools
-$ npm install
-```
-
-### :package: Commands
-```bash
-npm install
-npm start
-npm run build
-npm run dev
-```
 ## :wrench: Development
 
 ### :notebook: Pre-Requisites
@@ -75,6 +58,21 @@ The basic file structure for the project is as follows:
  ┣ 📜package.json
  ┣ 📜server.js
  ┗ 📜readme.md
+```
+## :zap: Usage
+### :electric_plug: Installation
+```bash
+$ git clone https://github.com/stiantha/DevTools.git
+$ cd DevTools
+$ npm install
+```
+
+### :package: Commands
+```bash
+npm install
+npm start
+npm run build
+npm run dev
 ```
 ## :book: Documentation
 
