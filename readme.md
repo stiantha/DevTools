@@ -22,7 +22,11 @@ Application that serves as a collection of resources for developers.
     - [License](#lock-license)
 
 ## :beginner: About
-This is a full stack application that uses MongoDB, Express.js, React.js, and Node.js (MERN).
+This is a full stack application that uses the MERN stack
+- MongoDB
+- Express.js
+- React.js
+- Node.js
 
 ## :zap: Usage
 The website can be used just like bookmarks, saving resources for when you need them.
