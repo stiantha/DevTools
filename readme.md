@@ -1,6 +1,7 @@
 # Introduction
-- Dev Tools
-- Collection of resources for developers. Ai, vscode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials and much more.
+- This is a MERN stack application.
+- It is a collection of resources for developers.
+- It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials and more.
 
 ## :ledger: Index
 
@@ -10,7 +11,7 @@
   - [Commands](#package-commands)
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
-  - [Developmen Environment](#nut_and_bolt-development-environment)
+  - [Development Environment](#nut_and_bolt-development-environment)
   - [File Structure](#file_folder-file-structure)
   - [Build](#hammer-build)  
   - [Deployment](#rocket-deployment)  
@@ -25,129 +26,70 @@
 - [License](#lock-license)
 
 ##  :beginner: About
-Add a detailed introduction about the project here, everything you want the reader to know.
+This is my first full stack application using MongoDB, Express.js, React.js, and Node.js (MERN).
 
 ## :zap: Usage
-Write about how to use this project.
+The website can be used just as bookmarks are used, saving resources for when you need them.
 
 ###  :electric_plug: Installation
-- Steps on how to install this project, to use it.
-- Be very detailed here, For example, if you have tools which run on different operating systems, write installation steps for all of them.
+To install this project, you need to have Node.js and MongoDB installed on your system. Then, you can clone this repository and run `npm install` in the project directory to install the necessary dependencies.
+
+```bash
+$ git clone <repository-url>
+$ cd <repository-name>
+$ npm install
+
+:package: Commands
+To start the project, use the command npm start.
+
+:wrench: Development
+Contributions to this project are welcome.
+
+:notebook: Pre-Requisites
+To develop this project, you need:
+
+Node.js
+MongoDB
+A text editor (like VSCode)
+:nut_and_bolt: Development Environment
+After cloning the project and installing dependencies, you can start the development server with npm start.
+
+:file_folder: File Structure
+The basic file structure for the project is as follows:
+
+No	File Name	Details
+1	client/src/App.js	Main React component
+2	server/server.js	Express server
+:hammer: Build
+To build the project for production, navigate to the client directory and run npm run build.
+
+:rocket: Deployment
+Deployment instructions will vary depending on your chosen hosting platform. Most platforms will require you to push your built project to a Git repository, then pull from that repository onto your server.
+
+:cherry_blossom: Community
+This project is open-source and contributions are welcome.
+
+:fire: Contribution
+Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
+
+:cactus: Branches
+The master branch is the production branch. Feature branches should be created for new features and merged into master when complete.
+
+:exclamation: Guideline
+Please ensure your code adheres to the standard JS style guide.
+
+:question: FAQ
+Q: How do I contribute to the project?
+A: You can report bugs, request features, or create a pull request.
+:page_facing_up: Resources
+MERN Stack Documentation
+:camera: Gallery
+Coming soon.
+
+:star2: Credit/Acknowledgment
+Created by [Your Name].
+
+:lock: License
+This project is licensed under the MIT License.
 
 ```
-$ add installations steps if you have to.
-```
-
-###  :package: Commands
-- Commands to start the project.
-
-##  :wrench: Development
-If you want other people to contribute to this project, this is the section, make sure you always add this.
-
-### :notebook: Pre-Requisites
-List all the pre-requisites the system needs to develop this project.
-- A tool
-- B tool
-
-###  :nut_and_bolt: Development Environment
-Write about setting up the working environment for your project.
-- How to download the project...
-- How to install dependencies...
-
-
-###  :file_folder: File Structure
-Add a file structure here with the basic details about files, below is an example.
-
-```
-.
-├── assets
-│   ├── css
-│   │   ├── index-ui.css
-│   │   └── rate-ui.css
-│   ├── images
-│   │   ├── icons
-│   │   │   ├── shrink-button.png
-│   │   │   └── umbrella.png
-│   │   ├── logo_144.png
-│   │   └── Untitled-1.psd
-│   └── javascript
-│       ├── index.js
-│       └── rate.js
-├── CNAME
-├── index.html
-├── rate.html
-└── README.md
-```
-
-| No | File Name | Details 
-|----|------------|-------|
-| 1  | index | Entry point
-
-###  :hammer: Build
-Write the build Instruction here.
-
-### :rocket: Deployment
-Write the deployment instruction here.
-
-## :cherry_blossom: Community
-
-If it's open-source, talk about the community here, ask social media links and other links.
-
- ###  :fire: Contribution
-
- Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
-
- 1. **Report a bug** <br>
- If you think you have encountered a bug, and I should know about it, feel free to report it [here]() and I will take care of it.
-
- 2. **Request a feature** <br>
- You can also request for a feature [here](), and if it will viable, it will be picked for development.  
-
- 3. **Create a pull request** <br>
- It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here]() and make a pull request.
-
- > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
-
-
- ### :cactus: Branches
-
- I use an agile continuous integration methodology, so the version is frequently updated and development is really fast.
-
-1. **`stage`** is the development branch.
-
-2. **`master`** is the production branch.
-
-3. No other permanent branches should be created in the main repository, you can create feature branches but they should get merged with the master.
-
-**Steps to work with feature branch**
-
-1. To start working on a new feature, create a new branch prefixed with `feat` and followed by feature name. (ie. `feat-FEATURE-NAME`)
-2. Once you are done with your changes, you can raise PR.
-
-**Steps to create a pull request**
-
-1. Make a PR to `stage` branch.
-2. Comply with the best practices and guidelines e.g. where the PR concerns visual elements it should have an image showing the effect.
-3. It must pass all continuous integration checks and get positive reviews.
-
-After this, changes will be merged.
-
-
-### :exclamation: Guideline
-coding guidelines or other things you want people to follow should follow.
-
-
-## :question: FAQ
-You can optionally add a FAQ section about the project.
-
-##  :page_facing_up: Resources
-Add important resources here
-
-##  :camera: Gallery
-Pictures of your project.
-
-## :star2: Credit/Acknowledgment
-Credit the authors here.
-
-##  :lock: License
-Add a license here, or a link to it.
