@@ -58,6 +58,7 @@ npm run dev
 ### :file_folder: File Structure
 The basic file structure for the project is as follows:
 ```bash
+📦DevTools
  ┣ 📂data
  ┃ ┣ 📜package-lock.json
  ┃ ┣ 📜package.json
