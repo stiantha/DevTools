@@ -17,7 +17,7 @@ Collection of resources for developers.<br>
     - AI tools
     - VSCode extensions
     - Cheatsheets
-    - icons
+    - Images
     - Source code
     - and more.
 
