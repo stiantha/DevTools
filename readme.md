@@ -1,6 +1,5 @@
 # Introduction
 Application that serves as a collection of resources for developers.<br>
-Can be used just like bookmarking a page, saving the resources for when you need them.<br>
 - **Features** 
     - User Management System
     - Add, edit, remove content that's stored in DB
