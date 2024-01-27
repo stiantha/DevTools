@@ -8,7 +8,6 @@ MERN stack application that serves as a collection of resources for developers. 
   - [Commands](#package-commands)
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
-  - [Development Environment](#nut_and_bolt-development-environment)
   - [File Structure](#file_folder-file-structure)
   - [Build](#hammer-build)  
   - [Deployment](#rocket-deployment)  
@@ -42,7 +41,7 @@ npm start
 npm run build
 npm run dev
 ```
-### :wrench: Development
+## :wrench: Development
 Contributions to this project are welcome.
 
 ### :notebook: Pre-Requisites
