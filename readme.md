@@ -54,10 +54,14 @@ After cloning the project and installing dependencies, you can start the develop
 
 ### :file_folder: File Structure
 The basic file structure for the project is as follows:
-
-client/src/App.js: Main React component
-server/server.js: Express server
-
+```bash
+ ┣ 📂data
+ ┃ ┣ 📜package-lock.json
+ ┃ ┣ 📜package.json
+ ┃ ┗ 📜server.js
+ ┣ 📜.gitignore
+ ┗ 📜readme.md
+```
 ## :hammer: Build
 To build the project for production, navigate to the client directory and run npm run build.
 
