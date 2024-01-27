@@ -1,4 +1,4 @@
-<h1 align="center">DevTools⚙️</h1>
+<h1>DevTools⚙️</h1>
 
 ### :ledger: Index
 - [About](#beginner-about)
