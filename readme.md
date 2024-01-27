@@ -1,5 +1,5 @@
 # Introduction
-This is a MERN stack application that serves as a collection of resources for developers. It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials, and more.
+MERN stack application that serves as a collection of resources for developers. It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials, and more.
 
 ## :ledger: Index
 - [About](#beginner-about)
@@ -44,11 +44,10 @@ To start the project, use the command npm start.
 Contributions to this project are welcome.
 
 ### :notebook: Pre-Requisites
-To develop this project, you need:
 
-Node.js
-MongoDB
-A text editor (like VSCode)
+- Node.js
+- MongoDB
+- A text editor (like VSCode)
 :nut_and_bolt: Development Environment
 After cloning the project and installing dependencies, you can start the development server with npm start.
 
