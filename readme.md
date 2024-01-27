@@ -38,7 +38,6 @@ npm run build
 npm run dev
 ```
 ## :wrench: Development
-Contributions to this project are welcome.
 
 ### :notebook: Pre-Requisites
 
