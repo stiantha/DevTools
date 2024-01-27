@@ -12,7 +12,6 @@ MERN stack application that serves as a collection of resources for developers. 
 - [Community](#cherry_blossom-community)
   - [Contribution](#fire-contribution)
 - [FAQ](#question-faq)
-- [Resources](#page_facing_up-resources)
 - [Gallery](#camera-gallery)
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
 - [License](#lock-license)
@@ -73,9 +72,6 @@ This project is open-source, and contributions are welcome.
     - Report bugs
     - Request features
     - Create a pull request
-
-### :page_facing_up: Resources
-MERN Stack Documentation
 
 ### :camera: Gallery
 Coming soon.
