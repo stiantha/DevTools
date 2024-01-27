@@ -63,8 +63,10 @@ The basic file structure for the project is as follows:
  ┗ 📜readme.md
 ```
 ## :hammer: Build
-To build the project for production, navigate to the client directory and run npm run build.
-
+To build the project for production, navigate to the client directory and run 
+```bash
+npm run build.
+```
 ## :rocket: Deployment
 Deployment instructions will vary depending on your chosen hosting platform. Most platforms will require you to push your built project to a Git repository, then pull from that repository onto your server.
 
