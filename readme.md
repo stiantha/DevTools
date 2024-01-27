@@ -9,8 +9,7 @@ MERN stack application that serves as a collection of resources for developers. 
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
-- [Community](#cherry_blossom-community)
-  - [Contribution](#fire-contribution)
+- [Contribution](#fire-contribution)
 - [FAQ](#question-faq)
 - [Gallery](#camera-gallery)
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
@@ -57,10 +56,6 @@ The basic file structure for the project is as follows:
  ┣ 📜.gitignore
  ┗ 📜readme.md
 ```
-
-### :cherry_blossom: Community
-This project is open-source, and contributions are welcome.
-
 ### :fire: Contribution
 - Your contributions are always welcome and appreciated.
 - You can report bugs, request features, or create a pull request.
