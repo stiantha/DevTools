@@ -39,6 +39,7 @@ $ git clone <repository-url>
 $ cd <repository-name>
 $ npm install
 ```
+
 :package: Commands
 To start the project, use the command npm start.
 
@@ -57,9 +58,8 @@ After cloning the project and installing dependencies, you can start the develop
 :file_folder: File Structure
 The basic file structure for the project is as follows:
 
-No	File Name	Details
-1	client/src/App.js	Main React component
-2	server/server.js	Express server
+No File Name Details 1 client/src/App.js Main React component 2 server/server.js Express server
+
 :hammer: Build
 To build the project for production, navigate to the client directory and run npm run build.
 
@@ -79,10 +79,11 @@ The master branch is the production branch. Feature branches should be created f
 Please ensure your code adheres to the standard JS style guide.
 
 :question: FAQ
-Q: How do I contribute to the project?
-A: You can report bugs, request features, or create a pull request.
+Q: How do I contribute to the project? A: You can report bugs, request features, or create a pull request.
+
 :page_facing_up: Resources
 MERN Stack Documentation
+
 :camera: Gallery
 Coming soon.
 
@@ -91,4 +92,5 @@ Created by [Your Name].
 
 :lock: License
 This project is licensed under the MIT License.
+
 ```
