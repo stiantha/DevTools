@@ -42,7 +42,6 @@ $ npm install
 npm install
 npm start
 npm run build
-npm test
 npm run dev
 ```
 ### :wrench: Development
