@@ -64,19 +64,19 @@ The basic file structure for the project is as follows:
  ┗ 📜readme.md
 ```
 
-## :cherry_blossom: Community
+### :cherry_blossom: Community
 This project is open-source, and contributions are welcome.
 
-## :fire: Contribution
+### :fire: Contribution
 Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
 
-## :cactus: Branches
+### :cactus: Branches
 The master branch is the production branch. Feature branches should be created for new features and merged into master when complete.
 
-## :exclamation: Guideline
+### :exclamation: Guideline
 Please ensure your code adheres to the standard JS style guide.
 
-## :question: FAQ
+### :question: FAQ
 
 - **Q: How do I contribute to the project?**
   - A: You can contribute to the project in several ways:
@@ -84,14 +84,14 @@ Please ensure your code adheres to the standard JS style guide.
     - Request features
     - Create a pull request
 
-## :page_facing_up: Resources
+### :page_facing_up: Resources
 MERN Stack Documentation
 
-## :camera: Gallery
+### :camera: Gallery
 Coming soon.
 
-## :star2: Credit/Acknowledgment
+### :star2: Credit/Acknowledgment
 Created by Stian Tharaldsen.
 
-## :lock: License
+### :lock: License
 This project is licensed under the MIT License.
