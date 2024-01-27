@@ -1,4 +1,20 @@
 # DevTools⚙️
+
+## :ledger: Index
+- [About](#beginner-about)
+- [Development](#wrench-development)
+  - [Pre-Requisites](#notebook-pre-requisites)
+  - [File Structure](#file_folder-file-structure)
+- [Usage](#zap-usage)
+  - [Installation](#electric_plug-installation)
+  - [Commands](#package-commands)
+- [Documentation](#book-documentation)
+    - [FAQ](#question-faq)
+    - [Gallery](#camera-gallery)
+    - [Credit/Acknowledgment](#star2-creditacknowledgment)
+    - [License](#lock-license)
+
+## :beginner: About
 Collection of resources for developers.<br>
 - **Features** 
     - User Management System
@@ -21,21 +37,6 @@ Collection of resources for developers.<br>
     - Source code
     - and more.
 
-## :ledger: Index
-- [About](#beginner-about)
-- [Development](#wrench-development)
-  - [Pre-Requisites](#notebook-pre-requisites)
-  - [File Structure](#file_folder-file-structure)
-- [Usage](#zap-usage)
-  - [Installation](#electric_plug-installation)
-  - [Commands](#package-commands)
-- [Documentation](#book-documentation)
-    - [FAQ](#question-faq)
-    - [Gallery](#camera-gallery)
-    - [Credit/Acknowledgment](#star2-creditacknowledgment)
-    - [License](#lock-license)
-
-## :beginner: About
 Full stack application that uses the MERN stack
 - MongoDB
 - Express.js
