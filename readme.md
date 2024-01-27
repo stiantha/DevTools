@@ -48,7 +48,8 @@ Contributions to this project are welcome.
 - Node.js
 - MongoDB
 - A text editor (like VSCode)
-:nut_and_bolt: Development Environment
+
+### :nut_and_bolt: Development Environment
 After cloning the project and installing dependencies, you can start the development server with npm start.
 
 ### :file_folder: File Structure
