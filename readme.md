@@ -2,7 +2,7 @@
 Application that serves as a collection of resources for developers.<br>
 Can be used just like bookmarking a page, saving the resources for when you need them.<br>
 - **Resources** 
-    - AI
+    - AI tools
     - VSCode extensions
     - Cheatsheets
     - icons
