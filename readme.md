@@ -1,5 +1,4 @@
-# DevTools⚙️
-
+<h1 align="center">DevTools⚙️</h1>
 ## :ledger: Index
 - [About](#beginner-about)
 - [Development](#wrench-development)
