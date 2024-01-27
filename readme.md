@@ -2,7 +2,7 @@
 Collection of resources for developers.<br>
 - **Features** 
     - User Management System
-    - Add, edit, remove content that's stored in DB
+    - Add, edit, remove content
     - Store specific content to "Favorites"
     - Search Functionality
     - Resource Rating
