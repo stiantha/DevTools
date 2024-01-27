@@ -43,7 +43,7 @@ Full stack application that uses the MERN stack
 - Node.js
 ## :wrench: Development
 
-### :notebook: Pre-Requisites
+#### :notebook: Pre-Requisites
 
 - Node.js
 - MongoDB
