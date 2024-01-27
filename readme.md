@@ -59,11 +59,10 @@ npm run dev
 The basic file structure for the project is as follows:
 ```bash
 📦DevTools
- ┣ 📂data
- ┃ ┣ 📜package-lock.json
- ┃ ┣ 📜package.json
- ┃ ┗ 📜server.js
  ┣ 📜.gitignore
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┣ 📜server.js
  ┗ 📜readme.md
 ```
 ## :book: Documentation
