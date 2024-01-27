@@ -84,4 +84,5 @@ Coming soon.
 Created by Stian Tharaldsen.
 
 ### :lock: License
-This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the terms of the MIT license.
+- See the [LICENSE](LICENSE) file for details.
