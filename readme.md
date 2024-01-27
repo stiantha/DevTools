@@ -81,8 +81,12 @@ The master branch is the production branch. Feature branches should be created f
 Please ensure your code adheres to the standard JS style guide.
 
 ## :question: FAQ
-Q: How do I contribute to the project?
-A: You can report bugs, request features, or create a pull request.
+
+- **Q: How do I contribute to the project?**
+  - A: You can contribute to the project in several ways:
+    - Report bugs
+    - Request features
+    - Create a pull request
 
 ## :page_facing_up: Resources
 MERN Stack Documentation
@@ -91,7 +95,7 @@ MERN Stack Documentation
 Coming soon.
 
 ## :star2: Credit/Acknowledgment
-Created by [Your Name].
+Created by Stian Tharaldsen.
 
 ## :lock: License
 This project is licensed under the MIT License.
