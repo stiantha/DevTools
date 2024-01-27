@@ -40,7 +40,7 @@ Collection of resources for developers.<br>
 ## :wrench: Development
 
 #### 🖥️ Tech
-Full stack application that uses the MERN stack
+
 - MongoDB
 - Express.js
 - React.js
