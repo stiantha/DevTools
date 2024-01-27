@@ -45,8 +45,6 @@ Full stack application that uses the MERN stack
 ## :zap: Usage
 
 ### :electric_plug: Installation
-To install this project, you need to have Node.js and MongoDB installed on your system. Then, you can clone this repository and run `npm install` in the project directory to install the necessary dependencies.
-
 ```bash
 $ git clone https://github.com/stiantha/DevTools.git
 $ cd DevTools
