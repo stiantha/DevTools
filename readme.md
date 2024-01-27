@@ -9,11 +9,12 @@ MERN stack application that serves as a collection of resources for developers. 
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
-- [Contribution](#fire-contribution)
-- [FAQ](#question-faq)
-- [Gallery](#camera-gallery)
-- [Credit/Acknowledgment](#star2-creditacknowledgment)
-- [License](#lock-license)
+- [Documentation](#book-documentation)
+    - [Contribution](#fire-contribution)
+    - [FAQ](#question-faq)
+    - [Gallery](#camera-gallery)
+    - [Credit/Acknowledgment](#star2-creditacknowledgment)
+    - [License](#lock-license)
 
 ## :beginner: About
 This is a full stack application that uses MongoDB, Express.js, React.js, and Node.js (MERN).
@@ -55,6 +56,7 @@ The basic file structure for the project is as follows:
  ┣ 📜.gitignore
  ┗ 📜readme.md
 ```
+## :book: Documentation
 ### :fire: Contribution
 - Your contributions are always welcome and appreciated.
 - You can report bugs, request features, or create a pull request.
