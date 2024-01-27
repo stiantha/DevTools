@@ -2,12 +2,12 @@
 Application that serves as a collection of resources for developers.<br>
 Can be used just like bookmarking a page, saving the resources for when you need them.<br>
 - **Resources** 
-- AI
-- VSCode extensions
-- Cheatsheets
-- icons
-- Source code
-- and more.
+    - AI
+    - VSCode extensions
+    - Cheatsheets
+    - icons
+    - Source code
+    - and more.
 
 ## :ledger: Index
 - [About](#beginner-about)
