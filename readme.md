@@ -61,33 +61,33 @@ server/server.js: Express server
 ## :hammer: Build
 To build the project for production, navigate to the client directory and run npm run build.
 
-# :rocket: Deployment
+## :rocket: Deployment
 Deployment instructions will vary depending on your chosen hosting platform. Most platforms will require you to push your built project to a Git repository, then pull from that repository onto your server.
 
-# :cherry_blossom: Community
+## :cherry_blossom: Community
 This project is open-source, and contributions are welcome.
 
-# :fire: Contribution
+## :fire: Contribution
 Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
 
-# :cactus: Branches
+## :cactus: Branches
 The master branch is the production branch. Feature branches should be created for new features and merged into master when complete.
 
-# :exclamation: Guideline
+## :exclamation: Guideline
 Please ensure your code adheres to the standard JS style guide.
 
-# :question: FAQ
+## :question: FAQ
 Q: How do I contribute to the project?
 A: You can report bugs, request features, or create a pull request.
 
-# :page_facing_up: Resources
+## :page_facing_up: Resources
 MERN Stack Documentation
 
-# :camera: Gallery
+## :camera: Gallery
 Coming soon.
 
-# :star2: Credit/Acknowledgment
+## :star2: Credit/Acknowledgment
 Created by [Your Name].
 
-# :lock: License
+## :lock: License
 This project is licensed under the MIT License.
