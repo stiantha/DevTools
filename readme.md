@@ -1,5 +1,7 @@
 <h1 align="center">DevTools⚙️</h1>
 
+<div align="center">
+
 ### :ledger: Index
 - [About](#beginner-about)
 - [Development](#wrench-development)
@@ -14,6 +16,8 @@
     - [Gallery](#camera-gallery)
     - [Credit/Acknowledgment](#star2-creditacknowledgment)
     - [License](#lock-license)
+
+</div>
 
 ## :beginner: About
 Collection of resources for developers.<br>
