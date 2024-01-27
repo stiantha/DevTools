@@ -37,13 +37,13 @@ $ cd <repository-name>
 $ npm install
 ```
 
-# :package: Commands
+### :package: Commands
 To start the project, use the command npm start.
 
-# :wrench: Development
+### :wrench: Development
 Contributions to this project are welcome.
 
-# :notebook: Pre-Requisites
+### :notebook: Pre-Requisites
 To develop this project, you need:
 
 Node.js
@@ -52,7 +52,7 @@ A text editor (like VSCode)
 :nut_and_bolt: Development Environment
 After cloning the project and installing dependencies, you can start the development server with npm start.
 
-# :file_folder: File Structure
+### :file_folder: File Structure
 The basic file structure for the project is as follows:
 
 client/src/App.js: Main React component
