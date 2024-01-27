@@ -70,12 +70,6 @@ This project is open-source, and contributions are welcome.
 ### :fire: Contribution
 Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
 
-### :cactus: Branches
-The master branch is the production branch. Feature branches should be created for new features and merged into master when complete.
-
-### :exclamation: Guideline
-Please ensure your code adheres to the standard JS style guide.
-
 ### :question: FAQ
 
 - **Q: How do I contribute to the project?**
