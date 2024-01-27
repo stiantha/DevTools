@@ -50,8 +50,10 @@ Contributions to this project are welcome.
 - A text editor (like VSCode)
 
 ### :nut_and_bolt: Development Environment
-After cloning the project and installing dependencies, you can start the development server with npm start.
-
+After cloning the project and installing dependencies, you can start the development server.
+```bash
+npm start
+```
 ### :file_folder: File Structure
 The basic file structure for the project is as follows:
 ```bash
