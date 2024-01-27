@@ -63,7 +63,8 @@ The basic file structure for the project is as follows:
 This project is open-source, and contributions are welcome.
 
 ### :fire: Contribution
-Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
+- Your contributions are always welcome and appreciated.
+- You can report bugs, request features, or create a pull request.
 
 ### :question: FAQ
 
