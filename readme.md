@@ -1,7 +1,8 @@
 # Introduction
+
 - This is a MERN stack application.
 - It is a collection of resources for developers.
-- It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials and more.
+- It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials, and more.
 
 ## :ledger: Index
 
@@ -38,7 +39,6 @@ To install this project, you need to have Node.js and MongoDB installed on your 
 $ git clone <repository-url>
 $ cd <repository-name>
 $ npm install
-```
 
 :package: Commands
 To start the project, use the command npm start.
@@ -58,8 +58,8 @@ After cloning the project and installing dependencies, you can start the develop
 :file_folder: File Structure
 The basic file structure for the project is as follows:
 
-No File Name Details 1 client/src/App.js Main React component 2 server/server.js Express server
-
+client/src/App.js: Main React component
+server/server.js: Express server
 :hammer: Build
 To build the project for production, navigate to the client directory and run npm run build.
 
@@ -67,7 +67,7 @@ To build the project for production, navigate to the client directory and run np
 Deployment instructions will vary depending on your chosen hosting platform. Most platforms will require you to push your built project to a Git repository, then pull from that repository onto your server.
 
 :cherry_blossom: Community
-This project is open-source and contributions are welcome.
+This project is open-source, and contributions are welcome.
 
 :fire: Contribution
 Your contributions are always welcome and appreciated. You can report bugs, request features, or create a pull request.
@@ -79,7 +79,8 @@ The master branch is the production branch. Feature branches should be created f
 Please ensure your code adheres to the standard JS style guide.
 
 :question: FAQ
-Q: How do I contribute to the project? A: You can report bugs, request features, or create a pull request.
+Q: How do I contribute to the project?
+A: You can report bugs, request features, or create a pull request.
 
 :page_facing_up: Resources
 MERN Stack Documentation
@@ -92,5 +93,3 @@ Created by [Your Name].
 
 :lock: License
 This project is licensed under the MIT License.
-
-```
