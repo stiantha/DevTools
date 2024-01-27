@@ -1,5 +1,12 @@
 # Introduction
-MERN stack application that serves as a collection of resources for developers. It includes AI, VSCode extensions, cheatsheets, colors, icons, fonts, images, sounds, videos, code, tutorials, and more.
+My first MERN stack application that serves as a collection of resources for developers. 
+- **such as**
+- AI
+- VSCode extensions
+- Cheatsheets
+- icons
+- Source code
+- and more.
 
 ## :ledger: Index
 - [About](#beginner-about)
