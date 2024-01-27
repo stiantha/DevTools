@@ -9,8 +9,6 @@ MERN stack application that serves as a collection of resources for developers. 
 - [Development](#wrench-development)
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
-  - [Build](#hammer-build)  
-  - [Deployment](#rocket-deployment)  
 - [Community](#cherry_blossom-community)
   - [Contribution](#fire-contribution)
 - [FAQ](#question-faq)
