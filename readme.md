@@ -10,7 +10,6 @@ MERN stack application that serves as a collection of resources for developers. 
   - [Pre-Requisites](#notebook-pre-requisites)
   - [File Structure](#file_folder-file-structure)
 - [Documentation](#book-documentation)
-    - [Contribution](#fire-contribution)
     - [FAQ](#question-faq)
     - [Gallery](#camera-gallery)
     - [Credit/Acknowledgment](#star2-creditacknowledgment)
@@ -57,9 +56,6 @@ The basic file structure for the project is as follows:
  ┗ 📜readme.md
 ```
 ## :book: Documentation
-### :fire: Contribution
-- Your contributions are always welcome and appreciated.
-- You can report bugs, request features, or create a pull request.
 
 ### :question: FAQ
 
