@@ -39,19 +39,19 @@ $ npm install
 
 ### :package: Commands
 ```bash
-- `npm install`: This command is used to install all the dependencies of the project.
+npm install`: This command is used to install all the dependencies of the project.
 
-- `npm start`: This command is used to start the application.
+npm start`: This command is used to start the application.
 
-- `npm run build`: This command is used to build the application for production.
+npm run build`: This command is used to build the application for production.
 
-- `npm test`: This command is used to run the test suite.
+npm test`: This command is used to run the test suite.
 
-- `npm run dev`: This command is used to start the application in development mode (if you have set up something like nodemon for automatic reloading).
+npm run dev`: This command is used to start the application in development mode (if you have set up something like nodemon for automatic reloading).
 
-- `npm run lint`: This command is used to run the linter (if you have one set up, like ESLint or Prettier).
+npm run lint`: This command is used to run the linter (if you have one set up, like ESLint or Prettier).
 
-- `npm run format`: This command is used to auto-format the code (if you have a formatter like Prettier set up).
+npm run format`: This command is used to auto-format the code (if you have a formatter like Prettier set up).
 ```
 ### :wrench: Development
 Contributions to this project are welcome.
