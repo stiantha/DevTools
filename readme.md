@@ -1,7 +1,11 @@
 # Introduction
 Application that serves as a collection of resources for developers.<br>
 Can be used just like bookmarking a page, saving the resources for when you need them.<br>
-All content is stored in a database<br>
+- **Features** 
+    - User
+    - Add, edit, remove content thats stored in DB
+    - Store specific content to "Favorites"
+
 - **Resources** 
     - AI tools
     - VSCode extensions
