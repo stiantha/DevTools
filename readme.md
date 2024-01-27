@@ -22,7 +22,7 @@ Application that serves as a collection of resources for developers.
     - [License](#lock-license)
 
 ## :beginner: About
-This is a full stack application that uses the MERN stack
+Full stack application that uses the MERN stack
 - MongoDB
 - Express.js
 - React.js
