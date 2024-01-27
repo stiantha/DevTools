@@ -1,5 +1,4 @@
-## :rocket: Introduction
-### DevTools<br>
+## ⚙️DevTools<br>
 Application that serves as a collection of resources for developers.<br>
 - **Features** 
     - User Management System
