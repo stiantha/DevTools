@@ -49,7 +49,7 @@ Full stack application that uses the MERN stack
 - MongoDB
 - A text editor (like VSCode)
 
-### :file_folder: File Structure
+#### :file_folder: File Structure
 The basic file structure for the project is as follows:
 ```bash
 📦DevTools
@@ -60,14 +60,14 @@ The basic file structure for the project is as follows:
  ┗ 📜readme.md
 ```
 ## :zap: Usage
-### :electric_plug: Installation
+#### :electric_plug: Installation
 ```bash
 $ git clone https://github.com/stiantha/DevTools.git
 $ cd DevTools
 $ npm install
 ```
 
-### :package: Commands
+#### :package: Commands
 ```bash
 npm install
 npm start
@@ -76,7 +76,7 @@ npm run dev
 ```
 ## :book: Documentation
 
-### :question: FAQ
+#### :question: FAQ
 
 - **Q: How do I contribute to the project?**
   - A: You can contribute to the project in several ways:
@@ -84,12 +84,11 @@ npm run dev
     - Request features
     - Create a pull request
 
-### :camera: Gallery
+#### :camera: Gallery
 Coming soon.
 
-### :star2: Credit/Acknowledgment
+#### :star2: Credit/Acknowledgment
 Created by Stian Tharaldsen.
-
-### :lock: License
+#### :lock: License
 This project is licensed under the terms of the MIT license.
 - See the [LICENSE](LICENSE) file for details.
