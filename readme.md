@@ -3,7 +3,7 @@ Collection of resources for developers.<br>
 - **Features** 
     - User Management System
     - Add, edit, remove content
-    - Store specific content to "Favorites"
+    - Save content to "Favorites"
     - Search Functionality
     - Resource Rating
     - Resource Comments
