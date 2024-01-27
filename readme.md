@@ -11,8 +11,6 @@ Collection of resources for developers.<br>
     - User Profiles
     - Social Sharing
     - Resource Submission
-    - Notifications
-    - Resource Verification
     - Dark Mode
 
 - **Resources** 
