@@ -68,7 +68,6 @@ The basic file structure for the project is as follows:
 ```bash
 $ git clone https://github.com/stiantha/DevTools.git
 $ cd DevTools
-$ npm install
 ```
 
 #### :package: Commands
