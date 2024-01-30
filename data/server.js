@@ -1,7 +1,8 @@
-// Setup
 // npm init -y
 // npm install express
 // npm install dotenv
+
+// Setup
 require('dotenv').config();
 const express = require('express');
 const app = express();
