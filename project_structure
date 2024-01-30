@@ -1,0 +1,12 @@
+┣ 📂client
+┃ ┣ 📂public
+┃ ┗ 📂src
+┣ 📂server
+┃ ┣ 📂models
+┃ ┣ 📂routes
+┃ ┣ 📜package.json
+┃ ┗ 📜server.js
+┣ 📜.gitignore
+┣ 📜LICENSE
+┣ 📜project_structure
+┗ 📜readme.md
