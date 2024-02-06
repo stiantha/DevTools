@@ -7,19 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "npm-run-all --parallel nodemon open:browser",
-    "nodemon": "nodemon server.js",
-    "open:browser": "node openBrowser.js"
+    "nodemon": "nodemon ./server/server.js",
+    "open:browser": "node ./server/openBrowser.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^8.1.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.3",
-    "open": "^10.0.3",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "open": "^10.0.3"
   }
 }
