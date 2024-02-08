@@ -8,7 +8,7 @@
     "start": "node server.js",
     "dev": "npm-run-all --parallel nodemon open:browser",
     "nodemon": "nodemon ./server/server.js",
-    "open:browser": "node ./server/openBrowser.js"
+    "open:browser": "node ./helpers/openBrowser.js"
   },
   "keywords": [],
   "author": "",
