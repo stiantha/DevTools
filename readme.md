@@ -1,5 +1,10 @@
 <h1>DevTools⚙️</h1>
 
+### Progress
+✅Backend
+❌Data
+⚙️Frontend
+
 ### :ledger: Index
 - [About](#beginner-about)
 - [Development](#wrench-development)
