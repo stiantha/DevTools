@@ -16,23 +16,23 @@
     - [Credit/Acknowledgment](#star2-creditacknowledgment)
     - [License](#lock-license)
 ## Progress
+#### Backend
+- [x] Set up Express.js server
+- [ ] Create RESTful API endpoints
+- [x] Set up MongoDB database
+- [ ] Implement user authentication with JWT
+- [ ] Implement data validation and sanitization
+- [x] Add error handling middleware
+- [ ] Set up file uploading functionality
+- [ ] Implement unit and integration tests
+
 #### Frontend
-- [ ] Set up React components
+- [x] Set up React components
 - [ ] Design UI/UX wireframes
 - [ ] Implement Redux for state management
 - [ ] Integrate with backend APIs
 - [ ] Implement client-side form validation
 - [ ] Add authentication and authorization
-
-#### Backend
-- [ ] Set up Express.js server
-- [ ] Create RESTful API endpoints
-- [ ] Set up MongoDB database
-- [ ] Implement user authentication with JWT
-- [ ] Implement data validation and sanitization
-- [ ] Add error handling middleware
-- [ ] Set up file uploading functionality
-- [ ] Implement unit and integration tests
 
 #### Deployment
 - [ ] Configure CI/CD pipeline
@@ -41,7 +41,7 @@
 - [ ] Set up domain and SSL certificate
 
 #### Documentation
-- [ ] Write detailed README.md
+- [x] Write detailed README.md
 - [ ] Document API endpoints and usage
 - [ ] Include setup and deployment instructions
 - [ ] Add code comments and inline documentation
