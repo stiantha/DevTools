@@ -1,9 +1,42 @@
 <h1>DevTools⚙️</h1>
 
 ### Progress
-✅Backend
-❌Data
-⚙️Frontend
+#### Frontend
+- [ ] Set up React components
+- [ ] Design UI/UX wireframes
+- [ ] Implement Redux for state management
+- [ ] Integrate with backend APIs
+- [ ] Implement client-side form validation
+- [ ] Add authentication and authorization
+
+#### Backend
+- [ ] Set up Express.js server
+- [ ] Create RESTful API endpoints
+- [ ] Set up MongoDB database
+- [ ] Implement user authentication with JWT
+- [ ] Implement data validation and sanitization
+- [ ] Add error handling middleware
+- [ ] Set up file uploading functionality
+- [ ] Implement unit and integration tests
+
+#### Deployment
+- [ ] Configure CI/CD pipeline
+- [ ] Deploy frontend to a hosting service (e.g., Netlify, Vercel)
+- [ ] Deploy backend to a cloud provider (e.g., AWS, Heroku)
+- [ ] Set up domain and SSL certificate
+
+#### Documentation
+- [ ] Write detailed README.md
+- [ ] Document API endpoints and usage
+- [ ] Include setup and deployment instructions
+- [ ] Add code comments and inline documentation
+
+#### Additional Features
+- [ ] Implement real-time updates using WebSockets
+- [ ] Add user profile management functionality
+- [ ] Integrate third-party APIs (e.g., payment gateway, social media)
+- [ ] Implement search functionality
+- [ ] Add internationalization support
 
 ### :ledger: Index
 - [About](#beginner-about)
@@ -19,47 +52,6 @@
     - [Gallery](#camera-gallery)
     - [Credit/Acknowledgment](#star2-creditacknowledgment)
     - [License](#lock-license)
-
-## Todo List
-
-Here's a list of tasks to be done:
-
-### Frontend
-- [ ] Set up React components
-- [ ] Design UI/UX wireframes
-- [ ] Implement Redux for state management
-- [ ] Integrate with backend APIs
-- [ ] Implement client-side form validation
-- [ ] Add authentication and authorization
-
-### Backend
-- [ ] Set up Express.js server
-- [ ] Create RESTful API endpoints
-- [ ] Set up MongoDB database
-- [ ] Implement user authentication with JWT
-- [ ] Implement data validation and sanitization
-- [ ] Add error handling middleware
-- [ ] Set up file uploading functionality
-- [ ] Implement unit and integration tests
-
-### Deployment
-- [ ] Configure CI/CD pipeline
-- [ ] Deploy frontend to a hosting service (e.g., Netlify, Vercel)
-- [ ] Deploy backend to a cloud provider (e.g., AWS, Heroku)
-- [ ] Set up domain and SSL certificate
-
-### Documentation
-- [ ] Write detailed README.md
-- [ ] Document API endpoints and usage
-- [ ] Include setup and deployment instructions
-- [ ] Add code comments and inline documentation
-
-## Additional Features
-- [ ] Implement real-time updates using WebSockets
-- [ ] Add user profile management functionality
-- [ ] Integrate third-party APIs (e.g., payment gateway, social media)
-- [ ] Implement search functionality
-- [ ] Add internationalization support
 
 ## :beginner: About
 Collection of resources for developers.<br>
