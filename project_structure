@@ -1,0 +1,16 @@
+┣ 📂client
+┃ ┣ 📂public
+┃ ┗ 📂src
+┣ 📂server
+┃ ┣ 📂models
+┃ ┃ ┗ 📜resourceModel.js
+┃ ┣ 📂routes
+┃ ┃ ┗ 📜resources.js
+┃ ┣ 📜openBrowser.js
+┃ ┗ 📜server.js
+┣ 📜.env
+┣ 📜.gitignore
+┣ 📜LICENSE
+┣ 📜package.json
+┣ 📜project_structure
+┗ 📜readme.md
