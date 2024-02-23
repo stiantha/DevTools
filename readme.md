@@ -1,6 +1,21 @@
 <h1>DevTools⚙️</h1>
 
-### Progress
+### :ledger: Index
+- [Progress](#progress)
+- [About](#beginner-about)
+- [Development](#wrench-development)
+  - [Tech](#computer-tech)
+  - [Pre-Requisites](#notebook-pre-requisites)
+  - [File Structure](#file_folder-file-structure)
+- [Usage](#zap-usage)
+  - [Installation](#electric_plug-installation)
+  - [Commands](#package-commands)
+- [Documentation](#book-documentation)
+    - [FAQ](#question-faq)
+    - [Gallery](#camera-gallery)
+    - [Credit/Acknowledgment](#star2-creditacknowledgment)
+    - [License](#lock-license)
+## Progress
 #### Frontend
 - [ ] Set up React components
 - [ ] Design UI/UX wireframes
@@ -37,21 +52,6 @@
 - [ ] Integrate third-party APIs (e.g., payment gateway, social media)
 - [ ] Implement search functionality
 - [ ] Add internationalization support
-
-### :ledger: Index
-- [About](#beginner-about)
-- [Development](#wrench-development)
-  - [Tech](#computer-tech)
-  - [Pre-Requisites](#notebook-pre-requisites)
-  - [File Structure](#file_folder-file-structure)
-- [Usage](#zap-usage)
-  - [Installation](#electric_plug-installation)
-  - [Commands](#package-commands)
-- [Documentation](#book-documentation)
-    - [FAQ](#question-faq)
-    - [Gallery](#camera-gallery)
-    - [Credit/Acknowledgment](#star2-creditacknowledgment)
-    - [License](#lock-license)
 
 ## :beginner: About
 Collection of resources for developers.<br>
