@@ -20,8 +20,8 @@
 - [x] Set up Express.js server
 - [x] Create RESTful API endpoints
 - [x] Set up MongoDB database
+- [ ] Structure and add data to MongoDB
 - [x] Add error handling middleware
-- [ ] Add data to MongoDB
 
 
 #### Frontend
