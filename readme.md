@@ -34,8 +34,6 @@
 #### Documentation
 - [x] Write detailed README.md
 - [ ] Document API endpoints and usage
-- [ ] Include setup and deployment instructions
-- [ ] Add code comments and inline documentation
 
 #### Additional Features
 - [ ] Implement real-time updates using WebSockets
