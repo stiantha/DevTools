@@ -75,7 +75,7 @@ export default function Sidebar({
         <Tooltip title="Source of this project" arrow placement="right">
           <Link
             target="_blank"
-            href={"https://github.com/noworneverev/react-vscode-portfolio"}
+            href={"https://github.com/stiantha/DevTools"}
             underline="none"
             color="inherit"
             sx={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }}
@@ -169,11 +169,11 @@ export default function Sidebar({
             )}
           </Box>
         </Tooltip>
-        <Tooltip title="Markdown syntax" arrow placement="right">
+        <Tooltip title="Settings" arrow placement="right">
           <Link
             onClick={() => {
               setSelectedIndex(-1);
-              navigate("/docs");
+              navigate("/settings");
             }}
             underline="none"
             color="inherit"

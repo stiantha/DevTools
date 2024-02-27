@@ -30,6 +30,7 @@ export default function AppButtons({
 }: Props) {
   const navigate = useNavigate();
   const theme = useTheme();
+  
   // const [selectedIndex, setSelectedIndex] = useState(-1);
   function renderButtonBgColor(index: number) {
     if (theme.palette.mode === "dark") {

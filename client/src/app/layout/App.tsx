@@ -19,7 +19,7 @@ import Home from "../pages/Home";
 import { pages } from "../pages/pages";
 import usePageTracking from "../hooks/usePageTracking";
 import { isBrowser } from "react-device-detect";
-
+/* 
 interface Page {
   index: number;
   name: string;
@@ -34,16 +34,16 @@ function initVisiblePageIndexs(pages: Page[]) {
     if (page.visible) tabs.push(page.index);
   }
   return tabs;
-}
+} */
 
 export default function App() {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(isBrowser);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [currentComponent, setCurrentComponent] = useState("");
-  const [visiblePageIndexs, setVisiblePageIndexs] = useState(
-    initVisiblePageIndexs(pages)
-  );
+  const homeIndex = pages.findIndex(page => page.name === 'home.md');
+  const [visiblePageIndexs, setVisiblePageIndexs] = useState([homeIndex]); // Set default value to [homeIndex]
+
   const [darkMode, setDarkMode] = useState(false);
   const [visiblePages, setVisiblePages] = useState(
     pages.filter((x) => x.visible)
