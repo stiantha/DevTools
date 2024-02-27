@@ -38,7 +38,7 @@ export default function Footer() {
         </Grid>
         <Grid
           item
-          sx={{ backgroundColor: "#3279CB", width: "200px" }}
+          sx={{ backgroundColor: "#333333", width: "200px" }}
           display="flex"
         >
           <Stack direction="row" spacing={0.5} sx={{ pl: 1 }}>
@@ -63,7 +63,7 @@ export default function Footer() {
                 alignItems: "center",
                 // cursor: "pointer",
                 "&:hover": {
-                  background: "#1f8ad2",
+                  background: "#1e1e1e",
                 },
               }}
             >
@@ -83,7 +83,7 @@ export default function Footer() {
                 px: 0.5,
                 cursor: "pointer",
                 "&:hover": {
-                  background: "#1f8ad2",
+                  background: "#1e1e1e",
                 },
               }}
             >
@@ -134,7 +134,7 @@ export default function Footer() {
         <Grid
           item
           // sx={{ backgroundColor: '#3279CB', minWidth: `calc(100% - 35px)` }}
-          sx={{ backgroundColor: "#3279CB", minWidth: `calc(100% - 235px)` }}
+          sx={{ backgroundColor: "#333333", minWidth: `calc(100% - 235px)` }}
           display="flex"
           justifyContent="flex-end"
         >

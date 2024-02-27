@@ -12,14 +12,11 @@ interface Page {
   index: number;
   name: string;
   route: string;
+  category: string;
 }
 
 interface Props {
-  pages: {
-    index: number;
-    name: string;
-    route: string;
-  }[];
+  pages: Page[];
   selectedIndex: number;
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
   currentComponent: string;
@@ -70,16 +67,17 @@ export default function AppTree({
 
   return (
     <TreeView
-      aria-label="file system navigator"
-      defaultCollapseIcon={<ExpandMoreIcon />}
-      defaultExpandIcon={<ChevronRightIcon />}
-      sx={{ minWidth: 220 }}
-      defaultExpanded={["-1"]}
-
-      // sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
-    >
+    aria-label="file system navigator"
+    defaultCollapseIcon={<ExpandMoreIcon />}
+    defaultExpandIcon={<ChevronRightIcon />}
+    sx={{ minWidth: 220 }}
+    defaultExpanded={["category-1"]}
+  >
+      
+      
+      
       <TreeItem
-        nodeId="-1"
+        nodeId="category-1"
         label="Home"
         color="#bdc3cf"
         onClick={() => {
@@ -87,7 +85,10 @@ export default function AppTree({
           setSelectedIndex(-1);
         }}
       >
-        {pages.map(({ index, name, route }) => (
+        
+        {pages
+      .filter(({ category }) => category === 'home')
+      .map(({ index, name, route }) => (
           <TreeItem
             key={index}
             nodeId={index.toString()}
@@ -112,6 +113,84 @@ export default function AppTree({
           />
         ))}
       </TreeItem>
-    </TreeView>
+      
+      
+      
+      
+
+  <TreeItem
+    nodeId="category-2"
+    label="AI"
+    color="#bdc3cf"
+    onClick={() => {
+      navigate("/");
+      setSelectedIndex(-1);
+    }}
+  >
+    {pages
+      .filter(({ category }) => category === 'ai')
+      .map(({ index, name, route }) => (
+        <TreeItem
+          key={index}
+          nodeId={index.toString()}
+          label={name}
+          sx={{
+            color: renderTreeItemColor(index),
+            backgroundColor: renderTreeItemBgColor(index),
+            "&& .Mui-selected": {
+              backgroundColor: renderTreeItemBgColor(index),
+            },
+          }}
+          icon={<VscMarkdown color="#6997d5" />}
+          onClick={() => {
+            if (!visiblePageIndexs.includes(index)) {
+              const newIndexs = [...visiblePageIndexs, index];
+              setVisiblePageIndexs(newIndexs);
+            }
+            navigate(route);
+            setSelectedIndex(index);
+            setCurrentComponent("tree");
+          }}
+        />
+      ))}
+  </TreeItem>
+
+  <TreeItem
+    nodeId="category-3"
+    label="Extensions"
+    color="#bdc3cf"
+    onClick={() => {
+      navigate("/");
+      setSelectedIndex(-1);
+    }}
+  >
+    {pages
+      .filter(({ category }) => category === 'extensions')
+      .map(({ index, name, route }) => (
+        <TreeItem
+          key={index}
+          nodeId={index.toString()}
+          label={name}
+          sx={{
+            color: renderTreeItemColor(index),
+            backgroundColor: renderTreeItemBgColor(index),
+            "&& .Mui-selected": {
+              backgroundColor: renderTreeItemBgColor(index),
+            },
+          }}
+          icon={<VscMarkdown color="#6997d5" />}
+          onClick={() => {
+            if (!visiblePageIndexs.includes(index)) {
+              const newIndexs = [...visiblePageIndexs, index];
+              setVisiblePageIndexs(newIndexs);
+            }
+            navigate(route);
+            setSelectedIndex(index);
+            setCurrentComponent("tree");
+          }}
+        />
+      ))}
+  </TreeItem>
+</TreeView>
   );
 }
