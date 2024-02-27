@@ -1,8 +1,5 @@
 <h1>DevTools⚙️</h1>
-
-![screencapture-localhost-3000-2024-02-27-11_53_59](https://github.com/stiantha/DevTools/assets/132207909/39cf7a6b-a175-491e-a0e7-d52e9e7ce5cc)
-
-
+![screencapture-localhost-3000-2024-02-27-12_02_48](https://github.com/stiantha/DevTools/assets/132207909/35e54de8-d538-43a6-b08d-6daa8b58abe5)
 ### :ledger: Index
 - [Progress](#progress)
 - [About](#beginner-about)
