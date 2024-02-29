@@ -25,7 +25,13 @@ export default function Home({ setSelectedIndex }: Props) {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: `calc(100vh - 20px - 33px)` }}
+      sx={{ 
+        minHeight: `calc(100vh - 20px - 33px)`,
+        backgroundImage: `url('/assets/images/background.jpg')`, 
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }}
     >
     </Grid>
   );
