@@ -1,8 +1,17 @@
-import {
-  Grid,
-} from "@mui/material";
 import React, { useEffect } from "react";
+import {
+  Box,
+  Grid,
+  IconButton,
+  Link,
+  Stack,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import logo from "../../static/favicon.png";
 import { useLocation } from "react-router-dom";
+import { links } from "./links";
+import ParticlesComponent from "../components/particles";
 
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -19,20 +28,60 @@ export default function Home({ setSelectedIndex }: Props) {
   }, [pathname]);
 
   return (
+    
     <Grid
       container
       spacing={0}
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ 
-        minHeight: `calc(100vh - 20px - 33px)`,
-        backgroundImage: `url('/assets/images/background.jpg')`, 
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }}
+      sx={{ minHeight: `calc(100vh - 20px - 33px)`, position: 'relative' }} // add position: 'relative'
     >
+            <Box sx={{zIndex: -1}}>
+        <ParticlesComponent />
+      </Box>
+      <Grid item xs={3}>
+        <Stack direction={{ xs: "column", sm: "row-reverse" }} spacing={0}>
+      {/*     <Box display="flex" sx={{ justifyContent: "center" }}>
+            <img src={logo} width="150px" alt="logo" />
+          </Box> */}
+          <Box>
+            <Grid
+              display="flex"
+              justifyContent={{ xs: "center", sm: "flex-start" }}
+            >
+              <Typography variant="h3">{process.env.REACT_APP_NAME}</Typography>
+            </Grid>
+            <Grid
+              display="flex"
+              justifyContent={{ xs: "center", sm: "flex-start" }}
+            >
+              <Typography variant="subtitle1" gutterBottom>
+              Empower Your Code with the right tools!
+              </Typography>
+            </Grid>
+{/*             <Grid
+              display="flex"
+              justifyContent={{ xs: "center", sm: "flex-start" }}
+            >
+              <Stack direction="row" spacing={0.4}>
+                {links.map((link) => (
+                  <Tooltip key={link.index} title={link.title} arrow>
+                    <Link
+                      target="_blank"
+                      href={link.href}
+                      underline="none"
+                      color="inherit"
+                    >
+                      <IconButton color="inherit">{link.icon}</IconButton>
+                    </Link>
+                  </Tooltip>
+                ))}
+              </Stack>
+            </Grid> */}
+          </Box>
+        </Stack>
+      </Grid>
     </Grid>
   );
 }
