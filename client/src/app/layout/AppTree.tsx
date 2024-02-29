@@ -36,7 +36,6 @@ export default function AppTree({
 }: Props) {
   const navigate = useNavigate();
   const theme = useTheme();
-  // const [selectedIndex, setSelectedIndex] = useState(-1);
   let { pathname } = useLocation();
 
   const page: Page = pages.find((x) => x.route === pathname)!;
