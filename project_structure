@@ -1,16 +1,60 @@
 ┣ 📂client
 ┃ ┣ 📂public
-┃ ┗ 📂src
+┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┣ 📜home.md
+┃ ┃ ┃ ┣ 📜perplexity.ai
+┃ ┃ ┃ ┣ 📜prettier.vscode
+┃ ┃ ┃ ┗ 📜settings.md
+┃ ┃ ┣ 📜favicon.ico
+┃ ┃ ┣ 📜favicon.png
+┃ ┃ ┣ 📜index.html
+┃ ┃ ┣ 📜manifest.json
+┃ ┃ ┗ 📜robots.txt
+┃ ┣ 📂src
+┃ ┃ ┣ 📂app
+┃ ┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┃ ┣ 📜globals.d.ts
+┃ ┃ ┃ ┃ ┣ 📜MDContainer.tsx
+┃ ┃ ┃ ┃ ┗ 📜particles.tsx
+┃ ┃ ┃ ┣ 📂hooks
+┃ ┃ ┃ ┃ ┗ 📜usePageTracking.tsx
+┃ ┃ ┃ ┣ 📂layout
+┃ ┃ ┃ ┃ ┣ 📜App.tsx
+┃ ┃ ┃ ┃ ┣ 📜AppButtons.tsx
+┃ ┃ ┃ ┃ ┣ 📜AppTree.tsx
+┃ ┃ ┃ ┃ ┣ 📜Footer.tsx
+┃ ┃ ┃ ┃ ┗ 📜Sidebar.tsx
+┃ ┃ ┃ ┗ 📂pages
+┃ ┃ ┃   ┣ 📜Home.tsx
+┃ ┃ ┃   ┣ 📜links.tsx
+┃ ┃ ┃   ┗ 📜pagedds.ts
+┃ ┃ ┣ 📂static
+┃ ┃ ┃ ┣ 📜favicon.png
+┃ ┃ ┃ ┗ 📜logo.svg
+┃ ┃ ┣ 📜index.tsx
+┃ ┃ ┣ 📜logo.svg
+┃ ┃ ┣ 📜react-app-env.d.ts
+┃ ┃ ┣ 📜reportWebVitals.ts
+┃ ┃ ┗ 📜setupTests.ts
+┃ ┣ 📜.env.development
+┃ ┣ 📜.env.production
+┃ ┣ 📜.gitignore
+┃ ┣ 📜package.json
+┃ ┗ 📜tsconfig.json
 ┣ 📂server
+┃ ┣ 📂controllers
+┃ ┃ ┗ 📜resourceController.js
+┃ ┣ 📂helpers
+┃ ┃ ┗ 📜openBrowser.js
 ┃ ┣ 📂models
 ┃ ┃ ┗ 📜resourceModel.js
 ┃ ┣ 📂routes
-┃ ┃ ┗ 📜resources.js
-┃ ┣ 📜openBrowser.js
+┃ ┃ ┗ 📜resourceRoutes.js
+┃ ┣ 📜.env
+┃ ┣ 📜.gitignore
+┃ ┣ 📜package.json
 ┃ ┗ 📜server.js
-┣ 📜.env
-┣ 📜.gitignore
 ┣ 📜LICENSE
-┣ 📜package.json
 ┣ 📜project_structure
-┗ 📜readme.md
+┣ 📜readme.md
+┗ 📜todo.md

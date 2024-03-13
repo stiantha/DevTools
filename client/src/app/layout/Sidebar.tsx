@@ -7,6 +7,7 @@ import { BiGitBranch } from "react-icons/bi";
 import Divider from "@mui/material/Divider";
 import { links } from "../pages/links";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineSearch } from 'react-icons/ai';
 
 interface Props {
   expanded: boolean;
@@ -25,6 +26,7 @@ export default function Sidebar({
 }: Props) {
   const navigate = useNavigate();
   return (
+    
     <Box
       sx={{
         height: `calc(100vh - 20px)`,
@@ -55,6 +57,7 @@ export default function Sidebar({
           }}
           onClick={() => setExpanded(!expanded)}
         >
+          <Tooltip title="Explorer" arrow placement="right">
           <Box
             sx={{
               flexGrow: 0,
@@ -69,9 +72,37 @@ export default function Sidebar({
             display="flex"
             justifyContent="center"
           >
+              
             <VscFiles />
+            
           </Box>
+          </Tooltip>
         </Box>
+        
+        
+        
+        <Tooltip title="Search" arrow placement="right">
+            <Box
+              sx={{
+                flexGrow: 0,
+                cursor: "pointer",
+                color: "#858585",
+                fontSize: 24,
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+              display="flex"
+              justifyContent="center"
+            >
+              <Box mt={0.7} sx={{ transform: 'scaleX(-1)' }}>
+                <AiOutlineSearch />
+              </Box>
+            </Box>
+        </Tooltip>
+        
+        
+        
         <Tooltip title="Source of this project" arrow placement="right">
           <Link
             target="_blank"

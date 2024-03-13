@@ -81,11 +81,67 @@ Collection of resources for developers.<br>
 The basic file structure for the project is as follows:
 ```bash
 📦DevTools
- ┣ 📜.gitignore
- ┣ 📜package-lock.json
- ┣ 📜package.json
- ┣ 📜server.js
- ┗ 📜readme.md
+┣ 📂client
+┃ ┣ 📂public
+┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┣ 📜home.md
+┃ ┃ ┃ ┣ 📜perplexity.ai
+┃ ┃ ┃ ┣ 📜prettier.vscode
+┃ ┃ ┃ ┗ 📜settings.md
+┃ ┃ ┣ 📜favicon.ico
+┃ ┃ ┣ 📜favicon.png
+┃ ┃ ┣ 📜index.html
+┃ ┃ ┣ 📜manifest.json
+┃ ┃ ┗ 📜robots.txt
+┃ ┣ 📂src
+┃ ┃ ┣ 📂app
+┃ ┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┃ ┣ 📜globals.d.ts
+┃ ┃ ┃ ┃ ┣ 📜MDContainer.tsx
+┃ ┃ ┃ ┃ ┗ 📜particles.tsx
+┃ ┃ ┃ ┣ 📂hooks
+┃ ┃ ┃ ┃ ┗ 📜usePageTracking.tsx
+┃ ┃ ┃ ┣ 📂layout
+┃ ┃ ┃ ┃ ┣ 📜App.tsx
+┃ ┃ ┃ ┃ ┣ 📜AppButtons.tsx
+┃ ┃ ┃ ┃ ┣ 📜AppTree.tsx
+┃ ┃ ┃ ┃ ┣ 📜Footer.tsx
+┃ ┃ ┃ ┃ ┗ 📜Sidebar.tsx
+┃ ┃ ┃ ┗ 📂pages
+┃ ┃ ┃   ┣ 📜Home.tsx
+┃ ┃ ┃   ┣ 📜links.tsx
+┃ ┃ ┃   ┗ 📜pagedds.ts
+┃ ┃ ┣ 📂static
+┃ ┃ ┃ ┣ 📜favicon.png
+┃ ┃ ┃ ┗ 📜logo.svg
+┃ ┃ ┣ 📜index.tsx
+┃ ┃ ┣ 📜logo.svg
+┃ ┃ ┣ 📜react-app-env.d.ts
+┃ ┃ ┣ 📜reportWebVitals.ts
+┃ ┃ ┗ 📜setupTests.ts
+┃ ┣ 📜.env.development
+┃ ┣ 📜.env.production
+┃ ┣ 📜.gitignore
+┃ ┣ 📜package.json
+┃ ┗ 📜tsconfig.json
+┣ 📂server
+┃ ┣ 📂controllers
+┃ ┃ ┗ 📜resourceController.js
+┃ ┣ 📂helpers
+┃ ┃ ┗ 📜openBrowser.js
+┃ ┣ 📂models
+┃ ┃ ┗ 📜resourceModel.js
+┃ ┣ 📂routes
+┃ ┃ ┗ 📜resourceRoutes.js
+┃ ┣ 📜.env
+┃ ┣ 📜.gitignore
+┃ ┣ 📜package.json
+┃ ┗ 📜server.js
+┣ 📜LICENSE
+┣ 📜project_structure
+┗ 📜readme.md
+
+
 ```
 ## :zap: Usage
 #### :electric_plug: Installation
