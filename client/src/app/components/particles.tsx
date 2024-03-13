@@ -48,7 +48,7 @@ import {
                 color: "#ffffff",
                 distance: 150,
                 enable: true,
-                opacity: 0.4,
+                opacity: 0.1,
                 width: 1
               },
               move: {
