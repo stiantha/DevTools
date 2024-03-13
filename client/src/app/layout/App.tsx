@@ -16,38 +16,55 @@ import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import AppButtons from "./AppButtons";
 import MDContainer from "../components/MDContainer";
 import Home from "../pages/Home";
-import { pages } from "../pages/pages";
 import usePageTracking from "../hooks/usePageTracking";
 import { isBrowser } from "react-device-detect";
-/* 
-interface Page {
+
+
+export async function getPages() {
+  try {
+    const response = await fetch('http://localhost:7000/api/resources');
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Failed to fetch:', error);
+  }
+}
+
+type Page = {
   index: number;
   name: string;
   route: string;
   visible: boolean;
-}
-
-function initVisiblePageIndexs(pages: Page[]) {
-  const tabs = [];
-  for (let i = 0; i < pages.length; i++) {
-    const page = pages[i];
-    if (page.visible) tabs.push(page.index);
-  }
-  return tabs;
-} */
+  category: string;
+  _id: string;
+};
 
 export default function App() {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(isBrowser);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [currentComponent, setCurrentComponent] = useState("");
-  const homeIndex = pages.findIndex(page => page.name === 'home.md');
-  const [visiblePageIndexs, setVisiblePageIndexs] = useState([homeIndex]); // Set default value to [homeIndex]
-
+  const [pages, setPages] = useState<Page[]>([]);
+  const [visiblePageIndexs, setVisiblePageIndexs] = useState<number[]>([]);
   const [darkMode, setDarkMode] = useState(false);
-  const [visiblePages, setVisiblePages] = useState(
-    pages.filter((x) => x.visible)
-  );
+  const [visiblePages, setVisiblePages] = useState<Page[]>([]);
+  
+  
+  // Then in your useEffect hook:
+  useEffect(() => {
+    getPages().then((data) => {
+      const pagesData = data[0].pages;
+      setPages(pagesData);
+      const homeIndex: number = pagesData.findIndex((page: Page) => page.name === 'home.md');
+      setVisiblePageIndexs([homeIndex]);
+      setVisiblePages(pagesData.filter((page: Page) => page.visible));
+    });
+  }, []);
   const paletteType = darkMode ? "dark" : "light";
   usePageTracking();
   const theme = createTheme({
@@ -87,16 +104,16 @@ export default function App() {
   const deletedIndex = visiblePages.find(
     (x) => !visiblePageIndexs.includes(x.index)
   )?.index;
-
+  
   useEffect(() => {
-    const newPages = [];
-
+    const newPages: Page[] = [];
+  
     for (const index of visiblePageIndexs) {
       const page = pages.find((x) => x.index === index);
       if (page) newPages.push(page);
     }
     setVisiblePages(newPages);
-
+  
     if (visiblePageIndexs.length === 0) {
       setSelectedIndex(-1);
       navigate("/");
@@ -118,9 +135,8 @@ export default function App() {
         (x) => x.index === Math.min(...visiblePageIndexs)
       );
       if (page) navigate(page.route);
-    } else {
     }
-  }, [visiblePageIndexs, navigate, deletedIndex, selectedIndex]);
+  }, [visiblePageIndexs, navigate, deletedIndex, selectedIndex, pages]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -158,7 +174,7 @@ export default function App() {
                     EXPLORER
                   </Typography>
                   <AppTree
-                    pages={pages.filter((x) => x.visible)}
+                    pages={pages}
                     selectedIndex={selectedIndex}
                     setSelectedIndex={setSelectedIndex}
                     currentComponent={currentComponent}
