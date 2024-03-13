@@ -75,7 +75,6 @@ Collection of resources for developers.<br>
 #### :notebook: Pre-Requisites
 
 - Node.js
-- MongoDB
 - A text editor (like VSCode)
 
 #### :file_folder: File Structure
