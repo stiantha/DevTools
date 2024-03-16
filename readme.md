@@ -1,6 +1,6 @@
 <h1>DevTools⚙️</h1>
 
-![screencapture-localhost-3000-2024-03-13-05_30_33](https://github.com/stiantha/DevTools/assets/132207909/ac91c6e0-409e-41f3-b242-013554e5ee40)
+![screencapture-localhost-3000-2024-03-16-17_10_34](https://github.com/stiantha/DevTools/assets/132207909/2cb8c6be-4504-487d-9663-64f8fa28ba87)
 
 ### :ledger: Index
 - [Progress](#progress)
