@@ -4,8 +4,6 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { VscFiles, VscSettingsGear } from "react-icons/vsc";
 import { BiGitBranch } from "react-icons/bi";
-import Divider from "@mui/material/Divider";
-import { links } from "../pages/links";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineSearch } from 'react-icons/ai';
 
@@ -130,7 +128,7 @@ export default function Sidebar({
             </Box>
           </Link>
         </Tooltip>
-
+{/* 
         <Divider sx={{ m: 0.5 }} />
 
         {links.map((link) => (
@@ -161,7 +159,8 @@ export default function Sidebar({
             </Link>
           </Tooltip>
         ))}
-      </Box>
+       */}
+       </Box>
 
       <Box
         sx={{ flexGrow: 0, pb: 0.5 }}
@@ -204,7 +203,7 @@ export default function Sidebar({
           <Link
             onClick={() => {
               setSelectedIndex(-1);
-              navigate("/settings");
+              navigate("/admin");
             }}
             underline="none"
             color="inherit"

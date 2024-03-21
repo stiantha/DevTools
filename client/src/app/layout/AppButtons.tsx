@@ -1,16 +1,19 @@
 import { Button, Box, Paper } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { VscMarkdown, VscChromeClose } from "react-icons/vsc";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { Container } from "@mui/system";
 
+interface Page {
+  index: number;
+  name: string;
+  route: string;
+  category: string;
+}
+
 interface Props {
-  pages: {
-    index: number;
-    name: string;
-    route: string;
-  }[];
+  pages: Page[];
   selectedIndex: number;
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
   currentComponent: string;
@@ -30,7 +33,13 @@ export default function AppButtons({
 }: Props) {
   const navigate = useNavigate();
   const theme = useTheme();
-  
+  let { pathname } = useLocation();
+
+  const page: Page = pages.find((x) => x.route === pathname)!;
+
+useEffect(() => {
+}, [page, setSelectedIndex]);
+
   function renderButtonBgColor(index: number) {
     if (theme.palette.mode === "dark") {
       return selectedIndex === index ? "#1e1e1e" : "#2d2d2d";
@@ -79,98 +88,125 @@ export default function AppButtons({
     }
   }
 
-  function renderPageButton(index: number, name: string, route: string) {
+  function renderPageButton(category: string) {
     return (
-      <Box
-        key={index}
-        sx={{
-          display: "inline-block",
-          borderRight: 1,
-          borderColor: theme.palette.mode === "dark" ? "#252525" : "#f3f3f3",
-        }}
-      >
-        <Button
-          key={index}
-          disableRipple
-          disableElevation
-          disableFocusRipple
-          onClick={() => {
-            setSelectedIndex(index);
-            setCurrentComponent("button");
-            navigate(route);
-          }}
-          sx={{
-            borderRadius: 0,
-            px: 2,
-            textTransform: "none",
-            backgroundColor: renderButtonBgColor(index),
-            color: renderButtonColor(index),
-            "&.MuiButtonBase-root:hover": {
-              bgcolor: renderButtonBgColor(index),
-            },
-            transition: "none",
-            pb: 0.2,
-          }}
-        >
-          <Box
-            sx={{ color: "#6997d5", width: 20, height: 20, mr: 0.4, ml: -1 }}
-          >
-            <VscMarkdown />
-          </Box>
-          {name}
-          <Box
-            component={Paper}
-            sx={{
-              ml: 1,
-              mr: -1,
-              backgroundColor: renderCloseButtonBgColor(index),
-              color: renderCloseButtonColor(index),
-              "&.MuiPaper-root:hover": {
-                bgcolor: renderCloseButtonHoverBgColor(index),
-                color: renderCloseButtonHoverColor(index),
-              },
-              width: 20,
-              height: 20,
-              transition: "none",
-            }}
-            elevation={0}
-            onClick={(e: any) => {
-              e.stopPropagation();
-              setVisiblePageIndexs(
-                visiblePageIndexs.filter((x) => x !== index)
-              );
-            }}
-          >
-            <VscChromeClose />
-          </Box>
-        </Button>
+      <Box 
+      key={category}
+      sx={{
+        display: "flex",
+        flexWrap: "nowrap",
+      }}
+    >
+        {pages
+          .filter(
+            (page) =>
+              page.category === category &&
+              visiblePageIndexs.includes(page.index)
+          )
+          .map((page) => (
+            <Box
+              key={page.index}
+              sx={{
+                display: "inline-block",
+                borderRight: 1,
+                borderColor:
+                  theme.palette.mode === "dark" ? "#252525" : "#f3f3f3",
+              }}
+            >
+              <Button
+                key={page.index}
+                disableRipple
+                disableElevation
+                disableFocusRipple
+                onClick={() => {
+                  setSelectedIndex(page.index);
+                  setCurrentComponent("button");
+                  navigate(page.route);
+                }}
+                sx={{
+                  borderRadius: 0,
+                  px: 2,
+                  textTransform: "none",
+                  backgroundColor: renderButtonBgColor(page.index),
+                  color: renderButtonColor(page.index),
+                  "&.MuiButtonBase-root:hover": {
+                    bgcolor: renderButtonBgColor(page.index),
+                  },
+                  transition: "none",
+                  pb: 0.2,
+                }}
+              >
+                <Box
+                  sx={{
+                    color: "#6997d5",
+                    width: 20,
+                    height: 20,
+                    mr: 0.4,
+                    ml: -1,
+                  }}
+                >
+                  <VscMarkdown />
+                </Box>
+                {page.name}
+                <Box
+                  component={Paper}
+                  sx={{
+                    ml: 1,
+                    mr: -1,
+                    backgroundColor: renderCloseButtonBgColor(page.index),
+                    color: renderCloseButtonColor(page.index),
+                    "&.MuiPaper-root:hover": {
+                      bgcolor: renderCloseButtonHoverBgColor(page.index),
+                      color: renderCloseButtonHoverColor(page.index),
+                    },
+                    width: 20,
+                    height: 20,
+                    transition: "none",
+                  }}
+                  elevation={0}
+                  onClick={(e: any) => {
+                    e.stopPropagation();
+                    setVisiblePageIndexs(
+                      visiblePageIndexs.filter((x) => x !== page.index)
+                    );
+                  }}
+                >
+                  <VscChromeClose />
+                </Box>
+              </Button>
+            </Box>
+          ))}
       </Box>
     );
   }
 
+  const categories = Array.from(new Set(pages.map((page) => page.category)));
+
   return (
-    <Container
-      maxWidth={false}
-      disableGutters
-      sx={{
-        display: "inline-block",
-        overflowX: "auto",
-        overflowY: "hidden",
-        whiteSpace: "nowrap",
-        backgroundColor: theme.palette.mode === "dark" ? "#252527" : "#f3f3f3",
-        "&::-webkit-scrollbar": {
-          height: "3px",
-        },
-        "&::-webkit-scrollbar-thumb": {
-          backgroundColor:
-            theme.palette.mode === "dark" ? "#535353" : "#8c8c8c",
-        },
-        "&::-webkit-darkScrollbar-thumb": {
-          backgroundColor:
-            theme.palette.mode === "dark" ? "#ffffff" : "#8c8c8c",
-        },
-      }}
-    >
-    </Container>
+<Container
+  maxWidth={false}
+  disableGutters
+  sx={{
+    display: "flex",
+    flexDirection: "row",
+    overflowX: "auto",
+    overflowY: "hidden",
+    whiteSpace: "nowrap",
+    backgroundColor: theme.palette.mode === "dark" ? "#252527" : "#f3f3f3",
+    "&::-webkit-scrollbar": {
+      height: "3px",
+    },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor:
+        theme.palette.mode === "dark" ? "#535353" : "#8c8c8c",
+    },
+    "&::-webkit-darkScrollbar-thumb": {
+      backgroundColor:
+        theme.palette.mode === "dark" ? "#ffffff" : "#8c8c8c",
+    },
+  }}
+>
+  {categories.map((category) => renderPageButton(category))}
+</Container>
   );
 }

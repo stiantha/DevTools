@@ -3,8 +3,6 @@ import {
   VscRemote,
   VscError,
   VscWarning,
-  VscBell,
-  VscFeedback,
   VscCheck,
 } from "react-icons/vsc";
 import { IoIosGitBranch } from "react-icons/io";
@@ -143,8 +141,27 @@ export default function Footer() {
                   },
                 }}
               >
-                <VscCheck fontSize="0.9rem" />
+                <Typography sx={{ fontSize: '0.6rem'}}>{'{ ‍‍ ‍}'}</Typography>
                 <Typography sx={{ ml: 0.5, mt: 0.1, fontSize: "0.6rem" }}>
+                  Markdown
+                </Typography>
+              </Box>
+
+              <Box
+                display="flex"
+                sx={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                  py: 0.3,
+                  px: 0.5,
+                  cursor: "pointer",
+                  "&:hover": {
+                    background: "#1e1e1e",
+                  },
+                }}
+              >
+                <VscCheck fontSize="0.9rem" />
+                <Typography sx={{ ml: 0.5, mt: 0.1, mr: -2, fontSize: "0.6rem" }}>
                   Prettier
                 </Typography>
               </Box>
@@ -162,23 +179,8 @@ export default function Footer() {
                   },
                 }}
               >
-                <VscFeedback fontSize="0.9rem" />
-              </Box>
-              <Box
-                display="flex"
-                sx={{
-                  width: "50%",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  py: 0.3,
-                  px: 0.5,
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "#1e1e1e",
-                  },
-                }}
-              >
-                <VscBell fontSize="0.9rem" />
+
+         
               </Box>
             </Stack>
           </Box>

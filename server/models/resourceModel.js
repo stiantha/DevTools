@@ -2,25 +2,25 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const resourceSchema = new Schema({
+    index: {
+        type: Number,
+        required: true
+    },
     name: {
         type: String,
         required: true
     },
-    url: {
+    route: {
         type: String,
+        required: true
+    },
+    visible: {
+        type: Boolean,
         required: true
     },
     category: {
         type: String,
         required: true
-    },
-    description: {
-        type: String,
-        required: false
-    },    
-    image: {
-        type: String,
-        required: false
     }
 }, {timestamps: true});
 

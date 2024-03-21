@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import ParticlesComponent from "../components/particles";
-import { TypeAnimation } from "react-type-animation";
+/* import { TypeAnimation } from "react-type-animation"; */
 
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -31,26 +31,30 @@ export default function Home({ setSelectedIndex }: Props) {
         <ParticlesComponent />
       </Box>
 
-      
       <Grid item xs={12} sm={8} md={6} lg={4}>
         <Box textAlign="center">
-          <Typography variant="h3">{process.env.REACT_APP_NAME}</Typography>
+          <Typography variant="h3"></Typography>
         </Box>
-{/*         <Box textAlign="left" width="30rem" marginLeft="30%">
-          <TypeAnimation
+        <Box
+          textAlign="left"
+          style={{ whiteSpace: "pre-wrap" }}
+        >
+{/*           <TypeAnimation
             sequence={[
-              "Empower development!",
-              5000,
-              "With the right tools",
-              5000,
-              "For the task at hand!",
-              5000,
+              "Shift + Alt + A\n  Comment out code",
+              10000,
+              "Ctrl + B\n  Toggle sidebar visibility.",
+              10000,
+              "Ctrl + Shift + E\n  Toggle Explorer view.",
+              10000,
+              "Ctrl + Alt + F\n  Format document.",
+              100000,
             ]}
             speed={30}
             repeat={Infinity}
             style={{ fontSize: "2em" }}
-          />
-        </Box> */}
+          /> */}
+        </Box>
       </Grid>
     </Grid>
   );

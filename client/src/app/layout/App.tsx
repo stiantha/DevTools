@@ -16,13 +16,13 @@ import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import AppButtons from "./AppButtons";
 import MDContainer from "../components/MDContainer";
 import Home from "../pages/Home";
+import Admin from "../pages/Admin";
 import usePageTracking from "../hooks/usePageTracking";
 import { isBrowser } from "react-device-detect";
 
-
 export async function getPages() {
   try {
-    const response = await fetch('http://localhost:7000/api/resources');
+    const response = await fetch("http://localhost:7000/api/resources");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -31,7 +31,7 @@ export async function getPages() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Failed to fetch:', error);
+    console.error("Failed to fetch:", error);
   }
 }
 
@@ -47,21 +47,22 @@ type Page = {
 export default function App() {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(isBrowser);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [currentComponent, setCurrentComponent] = useState("");
   const [pages, setPages] = useState<Page[]>([]);
   const [visiblePageIndexs, setVisiblePageIndexs] = useState<number[]>([]);
   const [darkMode, setDarkMode] = useState(false);
   const [visiblePages, setVisiblePages] = useState<Page[]>([]);
-  
-  
+
   // Then in your useEffect hook:
   useEffect(() => {
     getPages().then((data) => {
       const pagesData = data[0].pages;
       setPages(pagesData);
-      const homeIndex: number = pagesData.findIndex((page: Page) => page.name === 'home.md');
-      setVisiblePageIndexs([homeIndex]);
+      const homePage = pagesData.find((page: Page) => page.name === "home.md");
+      if (homePage) {
+        setVisiblePageIndexs([homePage.index]);
+      }
       setVisiblePages(pagesData.filter((page: Page) => page.visible));
     });
   }, []);
@@ -104,16 +105,16 @@ export default function App() {
   const deletedIndex = visiblePages.find(
     (x) => !visiblePageIndexs.includes(x.index)
   )?.index;
-  
+
   useEffect(() => {
     const newPages: Page[] = [];
-  
+
     for (const index of visiblePageIndexs) {
       const page = pages.find((x) => x.index === index);
       if (page) newPages.push(page);
     }
     setVisiblePages(newPages);
-  
+
     if (visiblePageIndexs.length === 0) {
       setSelectedIndex(-1);
       navigate("/");
@@ -214,7 +215,7 @@ export default function App() {
               >
                 <Routes>
                   <Route
-                    path="/"
+                    path="/admin"
                     element={<Home setSelectedIndex={setSelectedIndex} />}
                   />
                   {pages.map(({ index, name, route }) => (
@@ -227,6 +228,10 @@ export default function App() {
                   <Route
                     path="/docs"
                     element={<MDContainer path={`./pages/docs.md`} />}
+                  />
+                  <Route
+                    path="/"
+                    element={<Admin setSelectedIndex={setSelectedIndex} />}
                   />
                   <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>

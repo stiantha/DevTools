@@ -19,9 +19,9 @@ const getResourceById = async (req, res) => {
 };
 
 const createResource = async (req, res) => {
-    const {name, url, category, description, image} = req.body;
+    const { pages } = req.body;
     try {
-        const resource = await Resource.create({name, url, category, description, image});
+        const resource = await Resource.create({ pages });
         res.status(201).json(resource);
     } catch (error) {
         res.status(400).json({ message: error.message });
