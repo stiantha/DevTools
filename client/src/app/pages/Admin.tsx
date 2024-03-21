@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  Box,
   Grid,
   Typography,
   TextField,
@@ -11,21 +10,28 @@ import {
 } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import AceEditor from "react-ace";
-import ReactMarkdown from "react-markdown";
 import "ace-builds/src-noconflict/mode-markdown";
 import "./aceTheme";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Cancel";
+import Markdown from "react-markdown-it";
+import MarkdownIt from "markdown-it";
+import markdownItContainer from "markdown-it-container";
+
+const md = new MarkdownIt();
+
+md.use(markdownItContainer, "info");
+md.use(markdownItContainer, "warning");
+md.use(markdownItContainer, "success");
+md.use(markdownItContainer, "error");
 
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-
-
 export default function Admin({ setSelectedIndex }: Props) {
   const [index, setIndex] = useState(0);
-  const { pathname } = useLocation();
+  const {pathname } = useLocation();
   const [route, setRoute] = useState("");
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
@@ -174,7 +180,7 @@ export default function Admin({ setSelectedIndex }: Props) {
             setOptions={{ lineHeight: "20px" }}
           />
         ) : (
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <Markdown markdownit={md} source={markdown} />
         )}
       </Paper>
     </Grid>
