@@ -14,7 +14,26 @@ import "ace-builds/src-noconflict/mode-markdown";
 import "./aceTheme";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Cancel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import rehypeRaw from "rehype-raw";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#2db49d",
+    },
+    secondary: {
+      main: "#252527",
+    },
+  },
+});
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -28,7 +47,29 @@ export default function Admin({ setSelectedIndex }: Props) {
   const [name, setName] = useState("");
   const [markdown, setMarkdown] = useState("");
   const [editMode, setEditMode] = useState(true);
-
+  const customStyle = {
+    ...solarizedlight,
+    'pre[class*="language-"]': {
+      ...solarizedlight['pre[class*="language-"]'],
+      backgroundColor: "#2f2f2f", // replace #yourColor with your desired color
+    },
+  };
+  const renderers = {
+    code: ({ node, inline, className, children, ...props }: any) => {
+      const match = /language-(\w+)/.exec(className || "");
+      return !inline && match ? (
+        <SyntaxHighlighter
+          style={customStyle}
+          language={match[1]}
+          PreTag="div"
+          children={String(children).replace(/\n$/, "")}
+          {...props}
+        />
+      ) : (
+        <code className={className} {...props} />
+      );
+    },
+  };
   useEffect(() => {
     setSelectedIndex(-1);
   }, [setSelectedIndex]);
@@ -102,60 +143,74 @@ export default function Admin({ setSelectedIndex }: Props) {
           >
             devtools /
             <TextField
-              label="Category"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              size="small"
-              style={{ margin: "0 10px" }}
-            />
-            /
-            <TextField
               label="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="small"
               style={{ margin: "0 10px" }}
             />
+            in
+            <FormControl
+              variant="outlined"
+              size="small"
+              style={{ margin: "0 10px", width: "140px" }}
+            >
+              <InputLabel id="category-label">Category</InputLabel>
+              <Select
+                labelId="category-label"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                label="Category"
+              >
+                <MenuItem value={"Category1"}>Ai</MenuItem>
+                <MenuItem value={"Category2"}>Extensions</MenuItem>
+              </Select>
+            </FormControl>
           </Typography>
-          <Button
-            variant="outlined"
-            color="inherit"
-            startIcon={<CancelIcon />}
-            onClick={handleCancel}
-          >
-            Cancel Changes
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<SaveIcon />}
-            onClick={handleSubmit}
-            style={{ marginLeft: "10px" }}
-          >
-            Commit Changes
-          </Button>
+
+          <ThemeProvider theme={theme}>
+            <Button
+              variant="outlined"
+              color="inherit"
+              startIcon={<CancelIcon />}
+              onClick={handleCancel}
+            >
+              Cancel Changes
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<SaveIcon />}
+              onClick={handleSubmit}
+              style={{ marginLeft: "10px" }}
+            >
+              Commit Changes
+            </Button>
+          </ThemeProvider>
         </Toolbar>
       </AppBar>
       <Paper
         elevation={3}
         style={{ width: "90%", height: "100%", padding: "20px" }}
       >
-        <Button
-          variant="contained"
-          color={editMode ? "primary" : "inherit"}
-          onClick={() => setEditMode(true)}
-          style={{ marginBottom: "10px", marginRight: "10px" }}
-        >
-          Edit
-        </Button>
-        <Button
-          variant="contained"
-          color={!editMode ? "primary" : "inherit"}
-          onClick={() => setEditMode(false)}
-          style={{ marginBottom: "10px" }}
-        >
-          Preview
-        </Button>
+        <ThemeProvider theme={theme}>
+          <Button
+            variant="contained"
+            color={editMode ? "primary" : "secondary"}
+            onClick={() => setEditMode(true)}
+            style={{ marginBottom: "10px", marginRight: "10px" }}
+          >
+            Edit
+          </Button>
+          <Button
+            variant="contained"
+            color={!editMode ? "primary" : "secondary"}
+            onClick={() => setEditMode(false)}
+            style={{ marginBottom: "10px" }}
+          >
+            Preview
+          </Button>
+        </ThemeProvider>
         {editMode ? (
           <AceEditor
             mode="markdown"
@@ -170,7 +225,11 @@ export default function Admin({ setSelectedIndex }: Props) {
             setOptions={{ lineHeight: "20px" }}
           />
         ) : (
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <ReactMarkdown
+            components={renderers}
+            children={markdown}
+            rehypePlugins={[rehypeRaw]}
+          />
         )}
       </Paper>
     </Grid>
