@@ -14,24 +14,14 @@ import "ace-builds/src-noconflict/mode-markdown";
 import "./aceTheme";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Cancel";
-import Markdown from "react-markdown-it";
-import MarkdownIt from "markdown-it";
-import markdownItContainer from "markdown-it-container";
-
-const md = new MarkdownIt();
-
-md.use(markdownItContainer, "info");
-md.use(markdownItContainer, "warning");
-md.use(markdownItContainer, "success");
-md.use(markdownItContainer, "error");
-
+import ReactMarkdown from "react-markdown";
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Admin({ setSelectedIndex }: Props) {
   const [index, setIndex] = useState(0);
-  const {pathname } = useLocation();
+  const { pathname } = useLocation();
   const [route, setRoute] = useState("");
   const [visible, setVisible] = useState(false);
   const [category, setCategory] = useState("");
@@ -180,7 +170,7 @@ export default function Admin({ setSelectedIndex }: Props) {
             setOptions={{ lineHeight: "20px" }}
           />
         ) : (
-          <Markdown markdownit={md} source={markdown} />
+          <ReactMarkdown>{markdown}</ReactMarkdown>
         )}
       </Paper>
     </Grid>
