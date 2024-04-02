@@ -90,7 +90,7 @@ export default function Admin({ setSelectedIndex }: Props) {
 
   const createResource = async (page: Page) => {
     try {
-      const response = await fetch(`http://localhost:7000/api/resources`, {
+      const response = await fetch(`${process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API : 'http://localhost:7000'}/api/resources`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

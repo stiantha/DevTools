@@ -22,8 +22,7 @@ import { isBrowser } from "react-device-detect";
 
 export async function getPages() {
   try {
-    const response = await fetch("http://localhost:7000/api/resources");
-
+    const response = await fetch(`${process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API : 'http://localhost:7000'}/api/resources`)
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
