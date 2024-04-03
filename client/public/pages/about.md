@@ -27,8 +27,8 @@ The project is ongoing. Tasks include implementing
 
 ```ruby
 - Form validation
-
 - Search functionality
+- UI improvements
 ```
 
 ### Project Structure
