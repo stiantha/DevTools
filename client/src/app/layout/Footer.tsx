@@ -161,27 +161,12 @@ export default function Footer() {
                 }}
               >
                 <VscCheck fontSize="0.9rem" />
-                <Typography sx={{ ml: 0.5, mt: 0.1, mr: -2, fontSize: "0.6rem" }}>
+                <Typography sx={{ ml: 0.5, mt: 0.1, fontSize: "0.6rem" }}>
                   Prettier
                 </Typography>
               </Box>
 
-              <Box
-                display="flex"
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  py: 0.3,
-                  px: 0.5,
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "#1e1e1e",
-                  },
-                }}
-              >
 
-         
-              </Box>
             </Stack>
           </Box>
         </Grid>

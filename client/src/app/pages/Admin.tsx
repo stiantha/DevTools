@@ -84,48 +84,53 @@ export default function Admin({ setSelectedIndex }: Props) {
     document.title = process.env.REACT_APP_NAME!;
   }, [pathname]);
 
-
-
-
-
   const createResource = async (page: Page) => {
     try {
-      const response = await fetch(`${process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API : 'http://localhost:7000'}/api/resources`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(page), // Send the new page object
-      });
-  
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "production"
+            ? process.env.REACT_APP_API
+            : "http://localhost:7000"
+        }/api/resources`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(page), // Send the new page object
+        }
+      );
+
       if (!response.ok) {
         const data = await response.json();
-        throw new Error(`HTTP error! status: ${response.status}, message: ${data.message}`);
+        throw new Error(
+          `HTTP error! status: ${response.status}, message: ${data.message}`
+        );
       }
-  
+
       return response.json();
     } catch (error) {
       console.error("There was a problem with the fetch operation: ", error);
     }
-  }
+  };
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-  
+
     const newPage: Page = {
-      index: Date.now(), 
-      name: name, 
+      index: Date.now(),
+      name: name,
       route: "/" + name,
-      category: category, 
-      visible: true, 
+      category: category,
+      visible: true,
     };
-    
-    console.log('Page object to be sent:', newPage);
-    
+
+    console.log("Page object to be sent:", newPage);
+
     const data = await createResource(newPage); // Send the newPage object directly, not inside an array
-    
-    console.log('Response data:', data);
-  }
+
+    console.log("Response data:", data);
+  };
 
   const handleCancel = () => {
     // Reset the form state here
@@ -205,25 +210,133 @@ export default function Admin({ setSelectedIndex }: Props) {
       </AppBar>
       <Paper
         elevation={3}
-        style={{ width: "70%", height: "100%", padding: "20px", background: "#252527" }}
+        style={{
+          width: "70%",
+          height: "100%",
+          padding: "20px",
+          background: "#252527",
+        }}
       >
         <ThemeProvider theme={theme}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+    <div>
+      <Button
+        variant="contained"
+        color={editMode ? "primary" : "secondary"}
+        onClick={() => setEditMode(true)}
+        style={{ marginRight: "10px" }}
+      >
+        Edit
+      </Button>
+      <Button
+        variant="contained"
+        color={!editMode ? "primary" : "secondary"}
+        onClick={() => setEditMode(false)}
+      >
+        Preview
+      </Button>
+    </div>
           <Button
             variant="contained"
-            color={editMode ? "primary" : "secondary"}
-            onClick={() => setEditMode(true)}
-            style={{ marginBottom: "10px", marginRight: "10px" }}
+            color="secondary"
+            onClick={() => {
+              setEditMode(true);
+              setMarkdown(`# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+## Emphasis
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+## Blockquotes
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with \`+\`, \`-\`, or \`*\`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as \`1.\`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+## Code
+
+Block code "fences"
+
+\`\`\`
+Sample text here...
+\`\`\`
+
+Syntax highlighting
+
+\`\`\` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+\`\`\`
+
+## Links
+
+[link text](http://127606.vercel.app)
+
+[link with title](http://127606.vercel.app "title text!")
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+
+![Alt text][id]
+
+With a reference later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"`);
+            }}
+            style={{ marginBottom: "10px"}}
           >
-            Edit
+            Syntax
           </Button>
-          <Button
-            variant="contained"
-            color={!editMode ? "primary" : "secondary"}
-            onClick={() => setEditMode(false)}
-            style={{ marginBottom: "10px" }}
-          >
-            Preview
-          </Button>
+          </div>
         </ThemeProvider>
         {editMode ? (
           <AceEditor
