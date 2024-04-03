@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
-import ParticlesComponent from "../components/particles";
+/* import ParticlesComponent from "../components/particles"; */
 /* import { TypeAnimation } from "react-type-animation"; */
 
 interface Props {
@@ -10,9 +10,6 @@ interface Props {
 
 export default function Home({ setSelectedIndex }: Props) {
   const { pathname } = useLocation();
-  useEffect(() => {
-    setSelectedIndex(-1);
-  }, [setSelectedIndex]);
 
   useEffect(() => {
     document.title = process.env.REACT_APP_NAME!;
@@ -27,9 +24,9 @@ export default function Home({ setSelectedIndex }: Props) {
       justifyContent="center"
       sx={{ minHeight: `calc(100vh - 20px - 33px)`, position: "relative" }}
     >
-      <Box sx={{ zIndex: -1 }}>
-        <ParticlesComponent />
-      </Box>
+{/*     <Box sx={{ zIndex: -1 }}>
+      <ParticlesComponent />
+    </Box> */}
 
       <Grid item xs={12} sm={8} md={6} lg={4}>
         <Box textAlign="center">

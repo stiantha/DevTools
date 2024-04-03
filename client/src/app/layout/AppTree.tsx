@@ -64,30 +64,20 @@ export default function AppTree({
     }
   }
 
+  function renderCategory(category: string, label: string) {
   return (
-    <TreeView
-    aria-label="file system navigator"
-    defaultCollapseIcon={<ExpandMoreIcon />}
-    defaultExpandIcon={<ChevronRightIcon />}
-    sx={{ minWidth: 220 }}
-    defaultExpanded={["category-1"]}
-  >
-      
-      
-      
-      <TreeItem
-        nodeId="category-1"
-        label="Home"
-        color="#bdc3cf"
-        onClick={() => {
-          navigate("/");
-          setSelectedIndex(-1);
-        }}
-      >
-        
-        {pages
-      .filter(({ category }) => category === 'home')
-      .map(({ index, name, route }) => (
+    <TreeItem
+      nodeId={`category-${category}`}
+      label={label}
+      color="#bdc3cf"
+      onClick={() => {
+        navigate("/");
+        setSelectedIndex(-1);
+      }}
+    >
+      {pages
+        .filter(({ category: pageCategory }) => pageCategory === category)
+        .map(({ index, name, route }) => (
           <TreeItem
             key={index}
             nodeId={index.toString()}
@@ -111,85 +101,23 @@ export default function AppTree({
             }}
           />
         ))}
-      </TreeItem>
-      
-      
-      
-      
-
-  <TreeItem
-    nodeId="category-2"
-    label="AI"
-    color="#bdc3cf"
-    onClick={() => {
-      navigate("/");
-      setSelectedIndex(-1);
-    }}
-  >
-    {pages
-      .filter(({ category }) => category === 'ai')
-      .map(({ index, name, route }) => (
-        <TreeItem
-          key={index}
-          nodeId={index.toString()}
-          label={name}
-          sx={{
-            color: renderTreeItemColor(index),
-            backgroundColor: renderTreeItemBgColor(index),
-            "&& .Mui-selected": {
-              backgroundColor: renderTreeItemBgColor(index),
-            },
-          }}
-          icon={<VscMarkdown color="#6997d5" />}
-          onClick={() => {
-            if (!visiblePageIndexs.includes(index)) {
-              const newIndexs = [...visiblePageIndexs, index];
-              setVisiblePageIndexs(newIndexs);
-            }
-            navigate(route);
-            setSelectedIndex(index);
-            setCurrentComponent("tree");
-          }}
-        />
-      ))}
-  </TreeItem>
-
-  <TreeItem
-    nodeId="category-3"
-    label="Extensions"
-    color="#bdc3cf"
-    onClick={() => {
-      navigate("/");
-      setSelectedIndex(-1);
-    }}
-  >
-    {pages
-      .filter(({ category }) => category === 'extensions')
-      .map(({ index, name, route }) => (
-        <TreeItem
-          key={index}
-          nodeId={index.toString()}
-          label={name}
-          sx={{
-            color: renderTreeItemColor(index),
-            backgroundColor: renderTreeItemBgColor(index),
-            "&& .Mui-selected": {
-              backgroundColor: renderTreeItemBgColor(index),
-            },
-          }}
-          icon={<VscMarkdown color="#6997d5" />}
-          onClick={() => {
-            if (!visiblePageIndexs.includes(index)) {
-              const newIndexs = [...visiblePageIndexs, index];
-              setVisiblePageIndexs(newIndexs);
-            }
-            navigate(route);
-            setSelectedIndex(index);
-            setCurrentComponent("tree");
-          }}
-        />
-      ))}
-  </TreeItem>
-</TreeView>
+    </TreeItem>
   );
+}
+
+return (
+  <TreeView
+    aria-label="file system navigator"
+    defaultCollapseIcon={<ExpandMoreIcon />}
+    defaultExpandIcon={<ChevronRightIcon />}
+    sx={{ minWidth: 220 }}
+    defaultExpanded={["category-home"]}
+  >
+    {renderCategory('home', 'Home')}
+    {renderCategory('ai', 'AI')}
+    {renderCategory('extensions', 'Extensions')}
+    {renderCategory('programming', 'Programming')}
+    {renderCategory('design', 'Design')}
+  </TreeView>
+);
 }

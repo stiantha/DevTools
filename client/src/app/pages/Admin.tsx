@@ -112,13 +112,12 @@ export default function Admin({ setSelectedIndex }: Props) {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
   
-    // Define a new page
     const newPage: Page = {
-      index: Date.now(), // Assign the next index
-      name: name, // Use the state value
-      route: `/${name}`, // Generate a route based on the name
-      category: category, // Use the state value
-      visible: true, // This can be hardcoded if all new pages should be visible
+      index: Date.now(), 
+      name: name, 
+      route: "/" + name,
+      category: category, 
+      visible: true, 
     };
     
     console.log('Page object to be sent:', newPage);
@@ -144,10 +143,10 @@ export default function Admin({ setSelectedIndex }: Props) {
       sx={{
         minHeight: `calc(100vh - 20px - 33px)`,
         position: "relative",
-        marginTop: 7,
+        marginTop: 10,
       }}
     >
-      <AppBar position="static" style={{ width: "90%", background: "inherit" }}>
+      <AppBar position="static" style={{ width: "70%", background: "#1e1e1e" }}>
         <Toolbar style={{ width: "100%" }}>
           <Typography
             variant="h6"
@@ -177,6 +176,8 @@ export default function Admin({ setSelectedIndex }: Props) {
               >
                 <MenuItem value={"ai"}>Ai</MenuItem>
                 <MenuItem value={"extensions"}>Extensions</MenuItem>
+                <MenuItem value={"programming"}>Programming</MenuItem>
+                <MenuItem value={"design"}>Design</MenuItem>
               </Select>
             </FormControl>
           </Typography>
@@ -204,7 +205,7 @@ export default function Admin({ setSelectedIndex }: Props) {
       </AppBar>
       <Paper
         elevation={3}
-        style={{ width: "90%", height: "100%", padding: "20px" }}
+        style={{ width: "70%", height: "100%", padding: "20px", background: "#252527" }}
       >
         <ThemeProvider theme={theme}>
           <Button

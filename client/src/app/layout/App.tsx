@@ -28,6 +28,7 @@ export async function getPages() {
     }
 
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (error) {
     console.error("Failed to fetch:", error);
@@ -53,12 +54,11 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [visiblePages, setVisiblePages] = useState<Page[]>([]);
 
-  // Then in your useEffect hook:
   useEffect(() => {
     getPages().then((data) => {
-      const pagesData = data[0].pages;
+      const pagesData = data.flatMap((item: any) => item.pages ? item.pages : item);
       setPages(pagesData);
-      const homePage = pagesData.find((page: Page) => page.name === "home.md");
+      const homePage = pagesData.find((page: Page) => page.name === "about.md");
       if (homePage) {
         setVisiblePageIndexs([homePage.index]);
       }
@@ -214,7 +214,7 @@ export default function App() {
               >
                 <Routes>
                   <Route
-                    path="/admin"
+                    path="/"
                     element={<Home setSelectedIndex={setSelectedIndex} />}
                   />
                   {pages.map(({ index, name, route }) => (
@@ -229,7 +229,7 @@ export default function App() {
                     element={<MDContainer path={`./pages/docs.md`} />}
                   />
                   <Route
-                    path="/"
+                    path="/admin"
                     element={<Admin setSelectedIndex={setSelectedIndex} />}
                   />
                   <Route path="*" element={<Navigate to="/" replace />} />
