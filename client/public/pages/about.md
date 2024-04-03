@@ -27,6 +27,7 @@ The project is ongoing. Tasks include implementing
 
 ```ruby
 - Form validation
+
 - Search functionality
 ```
 
@@ -39,26 +40,13 @@ The `server` directory contains backend code.
 ```shell
 -‍‍┣ 📂client‍‍‍‍‍‍‍‍‍‍
 -┃ ┣ 📂public
--┃ ┃ ┣ 📂pages
--┃ ┃ ┃ ┣ 📜about.md
--┃ ┃ ┃ ┣ 📜carbon.now.sh
--┃ ┃ ┃ ┣ 📜colors.co
--┃ ┃ ┃ ┣ 📜copilot.vscode
--┃ ┃ ┃ ┣ 📜devin.ai
--┃ ┃ ┃ ┣ 📜file-tree.vscode
-┃ ┃ ┃ ┣ 📜perplexity.ai
-┃ ┃ ┃ ┣ 📜prettier.vscode
-┃ ┃ ┃ ┣ 📜remove.bg
-┃ ┃ ┃ ┣ 📜roadmap.sh
-┃ ┃ ┃ ┣ 📜settings.md
-┃ ┃ ┃ ┗ 📜smalldev.tools
-┃ ┃ ┣ 📜corrections.css
-┃ ┃ ┣ 📜favicon.ico
-┃ ┃ ┣ 📜favicon.png
-┃ ┃ ┣ 📜index.html
-┃ ┃ ┣ 📜manifest.json
-┃ ┃ ┣ 📜robots.txt
-┃ ┃ ┗ 📜tips.txt
+-┃ ┃ ┣ 📜corrections.css
+-┃ ┃ ┣ 📜favicon.ico
+-┃ ┃ ┣ 📜favicon.png
+-┃ ┃ ┣ 📜index.html
+-┃ ┃ ┣ 📜manifest.json
+-┃ ┃ ┣ 📜robots.txt
+-┃ ┃ ┗ 📜tips.txt
 ┃ ┣ 📂src
 ┃ ┃ ┣ 📂app
 ┃ ┃ ┃ ┣ 📂components
