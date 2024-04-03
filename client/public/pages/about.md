@@ -30,6 +30,7 @@ The project is ongoing. Tasks include implementing
 - Search functionality
 - UI improvements
 - Add more data
+- Configure dark mode for new elements
 ```
 
 ### Project Structure
