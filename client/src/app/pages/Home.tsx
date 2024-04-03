@@ -25,7 +25,7 @@ export default function Home({ setSelectedIndex }: Props) {
       justifyContent="center"
       sx={{ minHeight: `calc(100vh - 20px - 33px)`, position: "relative" }}
     >
-    <Box sx={{ zIndex: -1 }}>
+    <Box sx={{ zIndex: -1 }} className="particles-animation">
       <ParticlesComponent />
     </Box> 
 
