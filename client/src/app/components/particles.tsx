@@ -27,7 +27,7 @@ import {
             fpsLimit: 120,
             fps_limit: 60,
             interactivity: {
-              detect_on: "canvas",
+              detect_on: "window",
               events: {
                 onclick: { enable: true, mode: "push" },
                 onhover: {
@@ -61,7 +61,7 @@ import {
                 speed: 2,
                 straight: false
               },
-              number: { density: { enable: true, value_area: 800 }, value: 80 },
+              number: { density: { enable: true, value_area: 800 }, value: 20 },
               opacity: {
                 anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
                 random: false,

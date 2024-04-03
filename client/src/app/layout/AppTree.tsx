@@ -71,7 +71,7 @@ export default function AppTree({
       label={label}
       color="#bdc3cf"
       onClick={() => {
-        navigate("/");
+        navigate(`/${category}`);
         setSelectedIndex(-1);
       }}
     >

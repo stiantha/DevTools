@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
-/* import ParticlesComponent from "../components/particles"; */
-/* import { TypeAnimation } from "react-type-animation"; */
+import ParticlesComponent from "../components/particles"; 
+import { ReactComponent as DevIcon } from '../../static/devicons.svg';
+/* import { TypeAnimation } from "react-type-animation";  */
 
 interface Props {
   setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -24,9 +25,9 @@ export default function Home({ setSelectedIndex }: Props) {
       justifyContent="center"
       sx={{ minHeight: `calc(100vh - 20px - 33px)`, position: "relative" }}
     >
-{/*     <Box sx={{ zIndex: -1 }}>
+    <Box sx={{ zIndex: -1 }}>
       <ParticlesComponent />
-    </Box> */}
+    </Box> 
 
       <Grid item xs={12} sm={8} md={6} lg={4}>
         <Box textAlign="center">
@@ -36,6 +37,7 @@ export default function Home({ setSelectedIndex }: Props) {
           textAlign="left"
           style={{ whiteSpace: "pre-wrap" }}
         >
+                <DevIcon style={{ width: '100%', height: '100%' }} />
 {/*           <TypeAnimation
             sequence={[
               "Shift + Alt + A\n  Comment out code",

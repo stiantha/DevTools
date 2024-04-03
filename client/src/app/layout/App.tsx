@@ -19,6 +19,7 @@ import Home from "../pages/Home";
 import Admin from "../pages/Admin";
 import usePageTracking from "../hooks/usePageTracking";
 import { isBrowser } from "react-device-detect";
+import CategoryPage from '../pages/Category';
 
 export async function getPages() {
   try {
@@ -232,6 +233,7 @@ export default function App() {
                     path="/admin"
                     element={<Admin setSelectedIndex={setSelectedIndex} />}
                   />
+                  <Route path="/:category" element={<CategoryPage />} />
                   <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </Grid>
