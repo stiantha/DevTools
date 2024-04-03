@@ -29,6 +29,7 @@ The project is ongoing. Tasks include implementing
 - Form validation
 - Search functionality
 - UI improvements
+- Add more data
 ```
 
 ### Project Structure
