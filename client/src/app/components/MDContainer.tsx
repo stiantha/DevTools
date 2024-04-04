@@ -89,35 +89,32 @@ function MarkdownTableRow(props: { children: ReactNode }) {
   return <StyledTableRow>{props.children}</StyledTableRow>;
 }
 
+
 function MarkdownCode(props: any): ReactElement {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
-  if (props.inline) {
-    return <Chip size="small" label={props.children?.toString()} />;
-  } else if (props.className) {
-    const language = props.className.split("-")[1];
-    return (
+  const language = props.className ? props.className.split("-")[1] : undefined;
+
+  const renderSyntaxHighlighter = (language?: string) => (
+
       <SyntaxHighlighter
         language={language}
         style={isDarkMode ? materialDark : materialLight}
-        PreTag="div"
+
         showLineNumbers={true}
       >
         {props.children.toString().trim()}
       </SyntaxHighlighter>
-    );
+  );
+
+  if (props.inline) {
+    return <Chip size="small" label={props.children?.toString()} />;
+  } else if (language) {
+    return renderSyntaxHighlighter(language);
   } else {
-    return (
-      <SyntaxHighlighter
-        style={isDarkMode ? materialDark : materialLight}
-        PreTag="div"
-      >
-        {props.children}
-      </SyntaxHighlighter>
-    );
+    return renderSyntaxHighlighter();
   }
 }
-
 function MarkdownDivider() {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
@@ -182,27 +179,6 @@ function MarkdownBlockquote(props: any): ReactElement {
   );
 }
 
-// function MarkdownCheckbox(props: any) {
-//   let checked = props.checked;
-//   if (checked) {
-//     return (
-//       <FormControlLabel
-//         disabled
-//         control={<Checkbox defaultChecked />}
-//         label={props.label}
-//       />
-//     );
-//   } else {
-//     return (
-//       <FormControlLabel disabled control={<Checkbox />} label={props.label} />
-//     );
-//   }
-// }
-
-// function MarkdownImage(props: any) {
-//   return <img src={props.src} alt={props.alt} />;
-// }
-
 function MarkdownParagraph(props: any): ReactElement {
   const keyToCheck = "$$typeof";
   const exists = props.children.some(
@@ -266,30 +242,29 @@ export default function MDContainer({ path }: Props) {
 
   return (
     <Container>
-      <ReactMarkdown
-        children={content}
-        components={{
-          code: MarkdownCode,
-          a: MarkdownLink,
-          p: MarkdownParagraph,
-          table: MarkdownTable,
-          thead: TableHead,
-          tbody: TableBody,
-          th: MarkdownTableCell,
-          tr: MarkdownTableRow,
-          td: MarkdownTableCell,
-          tfoot: TableFooter,
-          h1: MarkdownH1,
-          h2: MarkdownH2,
-          hr: MarkdownDivider,
-          // br: MarkdownBr,
-          // input: MarkdownCheckbox,
-          // img: MarkdownImage,
-          blockquote: MarkdownBlockquote,
-        }}
-        remarkPlugins={[remarkGfm, remarkBreaks]}
-        rehypePlugins={[rehypeRaw]}
-      />
+      <div className="markdown-container">
+        <ReactMarkdown
+          children={content}
+          components={{
+            code: MarkdownCode,
+            a: MarkdownLink,
+            p: MarkdownParagraph,
+            table: MarkdownTable,
+            thead: TableHead,
+            tbody: TableBody,
+            th: MarkdownTableCell,
+            tr: MarkdownTableRow,
+            td: MarkdownTableCell,
+            tfoot: TableFooter,
+            h1: MarkdownH1,
+            h2: MarkdownH2,
+            hr: MarkdownDivider,
+            blockquote: MarkdownBlockquote,
+          }}
+          remarkPlugins={[remarkGfm, remarkBreaks]}
+          rehypePlugins={[rehypeRaw]}
+        />
+      </div>
     </Container>
   );
 }

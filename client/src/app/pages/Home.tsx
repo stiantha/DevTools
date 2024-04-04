@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid} from "@mui/material";
 import { useLocation } from "react-router-dom";
 import ParticlesComponent from "../components/particles"; 
 import { ReactComponent as DevIcon } from '../../static/devicons.svg';

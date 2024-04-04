@@ -14,3 +14,17 @@
       opacity: 1;
     }
   }
+
+  .markdown-container  {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-top: 6%;
+  }
+
+  .markdown-container div  {
+    margin-left: 5;
+
+  }
+
+  

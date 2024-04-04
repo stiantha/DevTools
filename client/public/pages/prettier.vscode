@@ -1,6 +1,7 @@
 # Prettier - Code formatter
 
-Prettier is an opinionated code formatter that supports multiple languages and integrates with most editors. The key philosophy of Prettier is to take away the decision-making of code formatting, so you can focus on code writing.
+Prettier is an opinionated code formatter that supports multiple languages and integrates with most editors.
+The key philosophy of Prettier is to take away the decision-making of code formatting, so you can focus on code writing.
 
 ### Features
 
@@ -8,13 +9,7 @@ Prettier is an opinionated code formatter that supports multiple languages and i
 - Integrates with most editors
 - Has few options
 
-### Installation
-
-You can install Prettier in Visual Studio Code by navigating to the Extensions view (Ctrl+Shift+X), searching for "Prettier - Code formatter", and clicking on Install.
-
 ### Usage
-
-Once installed, you can use Prettier by:
 
 1. Opening a file you want to format
 2. Pressing Ctrl+Shift+P to open the command palette
@@ -39,3 +34,4 @@ Prettier can be configured in your project using a .prettierrc file. Here's an e
 }
 ```
 For more information, visit the Prettier documentation.
+https://preview.devin.ai/.

@@ -31,7 +31,7 @@ ace.define("ace/theme/my_theme",["require","exports","module","ace/lib/dom"], fu
       color: #75715E;
   }
   .ace-my-theme .ace_selection {
-      background: #525252; /* Change this to the color you want for selected text */
+      background: #525252;
   }
   `;
 
