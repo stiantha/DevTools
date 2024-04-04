@@ -15,7 +15,6 @@ export default function Home({ setSelectedIndex }: Props) {
   useEffect(() => {
     document.title = process.env.REACT_APP_NAME!;
   }, [pathname]);
-
   return (
     <Grid
       container
@@ -25,36 +24,13 @@ export default function Home({ setSelectedIndex }: Props) {
       justifyContent="center"
       sx={{ minHeight: `calc(100vh - 20px - 33px)`, position: "relative" }}
     >
-    <Box sx={{ zIndex: -1 }} className="particles-animation">
-      <ParticlesComponent />
-    </Box> 
-
-      <Grid item xs={12} sm={8} md={6} lg={4}>
-        <Box textAlign="center">
-          <Typography variant="h3"></Typography>
-        </Box>
-        <Box
-          textAlign="left"
-          style={{ whiteSpace: "pre-wrap" }}
-        >
-                <DevIcon style={{ width: '100%', height: '100%' }} />
-{/*           <TypeAnimation
-            sequence={[
-              "Shift + Alt + A\n  Comment out code",
-              10000,
-              "Ctrl + B\n  Toggle sidebar visibility.",
-              10000,
-              "Ctrl + Shift + E\n  Toggle Explorer view.",
-              10000,
-              "Ctrl + Alt + F\n  Format document.",
-              100000,
-            ]}
-            speed={30}
-            repeat={Infinity}
-            style={{ fontSize: "2em" }}
-          /> */}
-        </Box>
-      </Grid>
+      <Box sx={{ zIndex: -1 }} className="particles-animation">
+        <ParticlesComponent />
+      </Box> 
+  
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <DevIcon style={{ width: '68%'}} />
+      </Box>
     </Grid>
   );
 }
