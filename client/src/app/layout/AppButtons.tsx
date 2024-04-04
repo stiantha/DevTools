@@ -1,5 +1,5 @@
 import { Button, Box, Paper } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { VscMarkdown, VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
@@ -34,11 +34,29 @@ export default function AppButtons({
   const navigate = useNavigate();
   const theme = useTheme();
   let { pathname } = useLocation();
-
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const page: Page = pages.find((x) => x.route === pathname)!;
 
-useEffect(() => {
-}, [page, setSelectedIndex]);
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (containerRef.current) {
+        containerRef.current.scrollLeft += e.deltaY;
+      }
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("wheel", handleWheel);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("wheel", handleWheel);
+      }
+    };
+  }, [containerRef]); /// Depend on containerRef.current
+
+  useEffect(() => {}, [page, setSelectedIndex]);
 
   function renderButtonBgColor(index: number) {
     if (theme.palette.mode === "dark") {
@@ -90,13 +108,13 @@ useEffect(() => {
 
   function renderPageButton(category: string) {
     return (
-      <Box 
-      key={category}
-      sx={{
-        display: "flex",
-        flexWrap: "nowrap",
-      }}
-    >
+      <Box
+        key={category}
+        sx={{
+          display: "flex",
+          flexWrap: "nowrap",
+        }}
+      >
         {pages
           .filter(
             (page) =>
@@ -183,30 +201,14 @@ useEffect(() => {
   const categories = Array.from(new Set(pages.map((page) => page.category)));
 
   return (
-<Container
-  maxWidth={false}
-  disableGutters
-  sx={{
-    display: "flex",
-    flexDirection: "row",
-    overflowX: "auto",
-    overflowY: "hidden",
-    whiteSpace: "nowrap",
-    backgroundColor: theme.palette.mode === "dark" ? "#252527" : "#f3f3f3",
-    "&::-webkit-scrollbar": {
-      height: "3px",
-    },
-    "&::-webkit-scrollbar-thumb": {
-      backgroundColor:
-        theme.palette.mode === "dark" ? "#535353" : "#8c8c8c",
-    },
-    "&::-webkit-darkScrollbar-thumb": {
-      backgroundColor:
-        theme.palette.mode === "dark" ? "#ffffff" : "#8c8c8c",
-    },
-  }}
->
-  {categories.map((category) => renderPageButton(category))}
-</Container>
+    <div
+      className="appButtonsScroll"
+      ref={containerRef}
+      style={{
+        backgroundColor: theme.palette.mode === "dark" ? "#252527" : "#f3f3f3",
+      }}
+    >
+      {categories.map((category) => renderPageButton(category))}
+    </div>
   );
 }

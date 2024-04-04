@@ -22,4 +22,21 @@
     padding-top: 6%;
   }
 
+
+  .appButtonsScroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
   
+  .appButtonsScroll::-webkit-scrollbar {
+    display: none; 
+  }
+
+
+
+
