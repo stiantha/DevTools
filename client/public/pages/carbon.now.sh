@@ -1,6 +1,6 @@
-# Carbon: Create Beautiful Code Snippets
+# [carbon.now.sh](https://carbon.now.sh)
 
-Carbon is a web-based tool that allows users to create beautiful and customizable code snippets with ease. Here's what you need to know:
+Web-based tool that allows users to create beautiful and customizable code snippets with ease.
 
 - **Simple Interface**: With an intuitive and user-friendly interface, Carbon makes it easy to generate code snippets quickly.
 
@@ -13,5 +13,3 @@ Carbon is a web-based tool that allows users to create beautiful and customizabl
 - **Integration with Development Workflows**: Carbon seamlessly integrates with development workflows, allowing developers to quickly create and share code snippets without interrupting their workflow.
 
 In summary, Carbon is a versatile tool that simplifies the process of creating and sharing beautiful code snippets, making it an essential resource for developers, educators, and anyone else who wants to showcase code in an elegant and visually appealing way.
-
-https://carbon.now.sh

@@ -1,7 +1,7 @@
-# File Tree Generator
+# [file-tree-generator](https://marketplace.visualstudio.com/items?itemName=MutableUniverse.vscode-file-tree-generator)
 
-File Tree Generator is a Visual Studio Code extension designed to streamline the process of generating a tree-like structure of files and directories within your workspace.
-With this extension, you can effortlessly visualize the hierarchy of your project's files and output it to a separate file for reference or documentation purposes.
+Designed to streamline the process of generating a tree-like structure of files and directories within your workspace.
+Effortlessly visualize the hierarchy of your project's files and output it to a separate file for reference or documentation purposes.
 
 ### Key Features
 
@@ -9,10 +9,12 @@ With this extension, you can effortlessly visualize the hierarchy of your projec
 
 - **File Content Inclusion**: Optionally include the content of the files in the generated tree, providing a comprehensive overview of your project's structure and contents.
 
-- **Ignoring Files**: Customize the file tree generation process by ignoring specific files and directories. You can define exclusion patterns using rules specified in the `.gitignore` file or manually set them in the extension settings.
+- **Ignoring Files**: Customize the file tree generation process by ignoring specific files and directories.
+You can define exclusion patterns using rules specified in the `.gitignore` file or manually set them in settings.
 
-- **Output to File**: The generated file tree is conveniently saved to a file named `generated-tree.txt`, allowing for easy access and sharing with team members or for documentation purposes.
+- **Output to File**: The generated file tree is conveniently saved to a file named `generated-tree.txt`, 
+allowing for easy access and sharing with team members or for documentation purposes.
 
-With File Tree Generator, managing and visualizing the structure of your project files has never been easier. Enhance your workflow and productivity by effortlessly generating and documenting your project's file hierarchy.
 
-https://marketplace.visualstudio.com/items?itemName=MutableUniverse.vscode-file-tree-generator
+
+

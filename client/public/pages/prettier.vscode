@@ -1,4 +1,4 @@
-# Prettier - Code formatter
+# [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 Prettier is an opinionated code formatter that supports multiple languages and integrates with most editors.
 The key philosophy of Prettier is to take away the decision-making of code formatting, so you can focus on code writing.
@@ -15,23 +15,4 @@ The key philosophy of Prettier is to take away the decision-making of code forma
 2. Pressing Ctrl+Shift+P to open the command palette
 3. Typing "Format Document" and pressing Enter
 
-You can also configure Prettier to format your files automatically on save by adding the following to your settings.json file:
-
-```json
-{
-  "editor.formatOnSave": true
-}
-```
-Configuration
-Prettier can be configured in your project using a .prettierrc file. Here's an example configuration:
-```json
-{
-  "semi": false,
-  "trailingComma": "all",
-  "singleQuote": true,
-  "printWidth": 80,
-  "tabWidth": 2
-}
-```
-For more information, visit the Prettier documentation.
-https://preview.devin.ai/.
+For more information, visit the Prettier [documentation](https://prettier.io/docs/en/).

@@ -170,9 +170,9 @@ export default function App() {
                   <Typography
                     variant="caption"
                     color="text.secondary"
-                    sx={{ ml: 4 }}
+                    sx={{ ml: 2, fontSize: '10px' }}
                   >
-                    EXPLORER
+                    EXPLORER: DEVTOOLS
                   </Typography>
                   <AppTree
                     pages={pages}

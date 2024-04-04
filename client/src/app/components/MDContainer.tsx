@@ -57,7 +57,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 function MarkdownLink(props: any) {
   return (
-    <Link href={props.href} target="_blank" underline="hover">
+    <Link href={props.href} target="_blank" underline="hover" color="#2db49d">
       {props.children}
     </Link>
   );
@@ -100,7 +100,6 @@ function MarkdownCode(props: any): ReactElement {
       <SyntaxHighlighter
         language={language}
         style={isDarkMode ? materialDark : materialLight}
-
         showLineNumbers={true}
       >
         {props.children.toString().trim()}

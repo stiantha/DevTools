@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { VscMarkdown } from "react-icons/vsc";
+import { Divider } from "@mui/material";
 
 interface Page {
   index: number;
@@ -113,11 +114,12 @@ return (
     sx={{ minWidth: 220 }}
     defaultExpanded={["category-home"]}
   >
-    {renderCategory('home', 'Home')}
-    {renderCategory('ai', 'AI')}
-    {renderCategory('extensions', 'Extensions')}
-    {renderCategory('programming', 'Programming')}
-    {renderCategory('design', 'Design')}
+    {renderCategory('home', 'docs')}
+    <Divider style={{ margin: '5px 0' }} /> 
+    {renderCategory('ai', 'ai')}
+    {renderCategory('extensions', 'extensions')}
+    {renderCategory('programming', 'programming')}
+    {renderCategory('design', 'design')}
   </TreeView>
 );
 }

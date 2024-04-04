@@ -1,6 +1,6 @@
-# DevTools
+# [DevTools](https://github.com/stiantha/DevTools)
 
-[DevTools](https://github.com/stiantha/DevTools) is a comprehensive collection of resources for web developers.
+Comprehensive collection of resources for web developers.
 
 ### Features
 
