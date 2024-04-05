@@ -163,7 +163,7 @@ export default function AppButtons({
                     ml: -1,
                   }}
                 >
-                  <VscMarkdown />
+                  <VscMarkdown color="#2db49d" />
                 </Box>
                 {page.name}
                 <Box

@@ -90,7 +90,7 @@ export default function AppTree({
                 backgroundColor: renderTreeItemBgColor(index),
               },
             }}
-            icon={<VscMarkdown color="#6997d5" />}
+            icon={<VscMarkdown color="#2db49d" />}
             onClick={() => {
               if (!visiblePageIndexs.includes(index)) {
                 const newIndexs = [...visiblePageIndexs, index];

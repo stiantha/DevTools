@@ -29,7 +29,7 @@ export default function Home({ setSelectedIndex }: Props) {
       </Box> 
   
       <Box display="flex" justifyContent="center" alignItems="center">
-        <DevIcon style={{ width: '68%'}} />
+        <DevIcon style={{ width: '100vh', opacity: '0.4'}} />
       </Box>
     </Grid>
   );

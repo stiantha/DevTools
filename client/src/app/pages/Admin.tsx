@@ -141,16 +141,16 @@ export default function Admin({ setSelectedIndex }: Props) {
 
   return (
     <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      sx={{
-        minHeight: `calc(100vh - 20px - 33px)`,
-        position: "relative",
-        marginTop: 10,
-      }}
-    >
+    container
+    spacing={0}
+    direction="column"
+    justifyContent="center" // Add this line
+    alignItems="center"
+    sx={{
+      minHeight: '100vh', // Change this line
+      position: "relative",
+    }}
+  >
       <AppBar position="static" style={{ width: "70%", background: "#1e1e1e" }}>
         <Toolbar style={{ width: "100%" }}>
           <Typography
@@ -293,11 +293,6 @@ Ordered
 1. You can use sequential numbers...
 1. ...or keep all the numbers as \`1.\`
 
-Start numbering with offset:
-
-57. foo
-1. bar
-
 ## Code
 
 Block code "fences"
@@ -308,12 +303,12 @@ Sample text here...
 
 Syntax highlighting
 
-\`\`\` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
+\`\`\` ts
+useEffect(() => {
+  let title = pathname.substring(1, pathname.length);
+  title = title[0].toUpperCase() + title.substring(1);
+  document.title = ''${process.env.REACT_APP_NAME!}
+}
 \`\`\`
 
 ## Links
@@ -324,13 +319,10 @@ console.log(foo(5));
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
+![webdev](https://github.com/stiantha/stiantha/assets/132207909/bac8f9c2-37e8-4abc-ba59-fa6c384ad9ec)
 
-![Alt text][id]
 
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"`);
+`);
             }}
             style={{ marginBottom: "10px"}}
           >
@@ -352,11 +344,13 @@ With a reference later in the document defining the URL location:
             setOptions={{ lineHeight: "20px" }}
           />
         ) : (
+          <div style={{ minHeight: '500px' }}>
           <ReactMarkdown
             components={renderers}
             children={markdown}
             rehypePlugins={[rehypeRaw]}
           />
+           </div>
         )}
       </Paper>
     </Grid>

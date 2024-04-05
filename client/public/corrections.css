@@ -22,6 +22,10 @@
     padding-top: 6%;
   }
 
+   img {
+    max-width: 56vw;
+  }
+
 
   .appButtonsScroll {
     display: flex;
