@@ -14,7 +14,6 @@
   - [Commands](#package-commands)
 - [Documentation](#book-documentation)
     - [FAQ](#question-faq)
-    - [Gallery](#camera-gallery)
     - [Credit/Acknowledgment](#star2-creditacknowledgment)
     - [License](#lock-license)
 ## Progress
@@ -145,9 +144,6 @@ npm start
     - Report bugs
     - Request features
     - Create a pull request
-
-#### :camera: Gallery
-Coming soon.
 
 #### :star2: Credit/Acknowledgment
 Created by Stian Tharaldsen.
