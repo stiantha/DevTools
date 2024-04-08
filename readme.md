@@ -61,18 +61,15 @@ Collection of resources for developers.<br>
 The basic file structure for the project is as follows:
 ```bash
 📦DevTools
-┣ 📂client
+┣ 📂client‍‍‍‍‍‍‍‍‍‍
 ┃ ┣ 📂public
-┃ ┃ ┣ 📂pages
-┃ ┃ ┃ ┣ 📜home.md
-┃ ┃ ┃ ┣ 📜perplexity.ai
-┃ ┃ ┃ ┣ 📜prettier.vscode
-┃ ┃ ┃ ┗ 📜settings.md
+┃ ┃ ┣ 📜corrections.css
 ┃ ┃ ┣ 📜favicon.ico
 ┃ ┃ ┣ 📜favicon.png
 ┃ ┃ ┣ 📜index.html
 ┃ ┃ ┣ 📜manifest.json
-┃ ┃ ┗ 📜robots.txt
+┃ ┃ ┣ 📜robots.txt
+┃ ┃ ┗ 📜tips.txt
 ┃ ┣ 📂src
 ┃ ┃ ┣ 📂app
 ┃ ┃ ┃ ┣ 📂components
@@ -85,18 +82,25 @@ The basic file structure for the project is as follows:
 ┃ ┃ ┃ ┃ ┣ 📜App.tsx
 ┃ ┃ ┃ ┃ ┣ 📜AppButtons.tsx
 ┃ ┃ ┃ ┃ ┣ 📜AppTree.tsx
+┃ ┃ ┃ ┃ ┣ 📜CategoryContext.tsx
 ┃ ┃ ┃ ┃ ┣ 📜Footer.tsx
 ┃ ┃ ┃ ┃ ┗ 📜Sidebar.tsx
 ┃ ┃ ┃ ┗ 📂pages
+┃ ┃ ┃   ┣ 📜aceTheme.js
+┃ ┃ ┃   ┣ 📜Admin.tsx
+┃ ┃ ┃   ┣ 📜Category.tsx
 ┃ ┃ ┃   ┣ 📜Home.tsx
 ┃ ┃ ┃   ┣ 📜links.tsx
-┃ ┃ ┃   ┗ 📜pagedds.ts
+┃ ┃ ┃   ┗ 📜pages.ts
 ┃ ┃ ┣ 📂static
+┃ ┃ ┃ ┣ 📜devicons.svg
 ┃ ┃ ┃ ┣ 📜favicon.png
 ┃ ┃ ┃ ┗ 📜logo.svg
+┃ ┃ ┣ 📜declarations.d.ts
 ┃ ┃ ┣ 📜index.tsx
 ┃ ┃ ┣ 📜logo.svg
 ┃ ┃ ┣ 📜react-app-env.d.ts
+┃ ┃ ┣ 📜react-markdown-it.d.ts
 ┃ ┃ ┣ 📜reportWebVitals.ts
 ┃ ┃ ┗ 📜setupTests.ts
 ┃ ┣ 📜.env.development
@@ -117,10 +121,13 @@ The basic file structure for the project is as follows:
 ┃ ┣ 📜.gitignore
 ┃ ┣ 📜package.json
 ┃ ┗ 📜server.js
+┣ 📜.gitignore
 ┣ 📜LICENSE
+┣ 📜package.json
 ┣ 📜project_structure
-┗ 📜readme.md
-
+┣ 📜readme.md
+┣ 📜start.bat
+┗ 📜todo.md
 
 ```
 ## :zap: Usage
