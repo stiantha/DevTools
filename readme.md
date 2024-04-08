@@ -22,47 +22,28 @@
 - [x] Set up Express.js server
 - [x] Create RESTful API endpoints
 - [x] Set up MongoDB database
-- [ ] Structure and add data to MongoDB
+- [x] Structure and add data to MongoDB
 - [x] Add error handling middleware
 
 
 #### Frontend
 - [x] Set up React components
-- [ ] Implement Redux for state management
-- [ ] Integrate with backend APIs
+- [x] Integrate with backend APIs
 - [ ] Implement client-side form validation
-- [ ] Add authentication and authorization
 
 #### Documentation
 - [x] Write detailed README.md
-- [ ] Document API endpoints and usage
 
 #### Additional Features
-- [ ] Implement real-time updates using WebSockets
 - [ ] Implement search functionality
 
 ## :beginner: About
 Collection of resources for developers.<br>
-- **Features** 
-    - User Management System
-    - Add, edit, remove content
-    - Save content to "Favorites"
+- **Features**
+    - Markdown Format
     - Search Functionality
-    - Resource Rating
-    - Resource Comments
-    - Resource Categories
-    - User Profiles
-    - Social Sharing
     - Resource Submission
     - Dark Mode
-
-- **Resources** 
-    - AI tools
-    - VSCode extensions
-    - Cheatsheets
-    - Images
-    - Source code
-    - and more.
 
 ## :wrench: Development
 
@@ -76,7 +57,6 @@ Collection of resources for developers.<br>
 #### :notebook: Pre-Requisites
 
 - Node.js
-- A text editor (like VSCode)
 
 #### :file_folder: File Structure
 The basic file structure for the project is as follows:
@@ -155,8 +135,6 @@ $ cd DevTools
 ```bash
 npm install
 npm start
-npm run build
-npm run dev
 ```
 ## :book: Documentation
 
